@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Travel Market | Admin</title>
+    <!-- Material Design Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- CSS -->
+	<link rel="stylesheet" href="../../../../plugin/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../plugin/css/mdb.pro.css">
+    <link rel="stylesheet" href="../../../../../plugin/css/mdb.css">
+    <link rel="stylesheet" href="../../../../plugin/css/admin.css">
+    <link rel="stylesheet" href="../../../../plugin/font/font-awesome/css/font-awesome.min.css">
+    <!-- ./ CSS -->
+	<!-- Jquery -->
+    <script src="../../../../plugin/js/jquery.min.js"></script>
+    <script src="../../../../plugin/js/mdb.min.pro.js"></script>
+    <script src="../../../../plugin/js/chart.min.js"></script>
+    <script src="../../../../plugin/js/bootstrap.min.js"></script>
+    <script src="../../../../plugin/js/nicescroll.js"></script>
+    <script src="../../../../plugin/js/backTop.js"></script>
+    <script src="../../../../plugin/js/validate.js"></script>
+    <!-- ./ Jquery -->
+    <!-- Main Jquery -->
+    <script>
+        $(document).ready(function(){
+            $("html").niceScroll();
+            $('.button-collapse').sideNav();
+            $('.collapsible').collapsible();
+
+            //toast
+            $("#success_msg_1").click(function(ev)
+            {
+                ev.preventDefault();
+                var opts = {
+                    "closeButton": true,
+                    "debug": false,
+                    "positionClass": "toast-top-rigth",
+                    "onclick": null,
+                    "showDuration": "300",
+                    "hideDuration": "1000",
+                    "timeOut": "5000",
+                    "extendedTimeOut": "1000",
+                    "showEasing": "swing",
+                    "hideEasing": "linear",
+                    "showMethod": "fadeIn",
+                    "hideMethod": "fadeOut"
+                    };
+                toastr.success("Cập nhật cấu hình thanh toán thành công !!!.", opts);
+            });
+        });
+    </script>
+    <!-- /. Main Jquery -->
+</head>
+<body>
+    
+    <!-- Sidebar navigation -->
+    <ul id="slide-out" class="side-nav fixed admin-side-nav dark-side-nav">
+        <!-- Logo -->
+        <div class="logo-wrapper">
+            <img src="../../../../img/beach.jpg" class="img-responsive img-circle">
+            <div class="rgba-stylish-strong">
+                <p class="user white-text">Admin
+                    <br> admin@gmail.com
+                </p>
+            </div>
+        </div>
+        <!--/. Logo -->
+
+        <!-- Side navigation links -->
+        <ul class="collapsible collapsible-accordion">
+            <li><input type="text" placeholder="Tìm kiếm ..."></li>
+            <li><a href="../../admin.html" class="waves-effect waves-light"><i class="fa fa-home"></i> Trang chủ</a></li>
+            <li><a href="../don-hang/don-hang.html" class="waves-effect waves-light"><i class="fa fa-money"></i> Đơn hàng</a></li>
+            <li><a href="../tour/tour.html" class="waves-effect waves-light"><i class="fa fa-tag"></i> Tour</a></li>
+            <li><a href="../danh-muc-tour/danh-muc-tour.html" class="waves-effect waves-light"><i class="fa fa-tags"></i> Danh mục tour</a></li>
+            <li><a href="../khach-hang/khach-hang.html" class="waves-effect waves-light"><i class="fa fa-users"></i> Khách hàng</a></li>
+            <li><a href="#" class="waves-effect waves-light"><i class="fa fa-volume-up"></i> Khuyến mại</a></li>
+            <hr>
+            <li><a href="../trang-noi-dung/trang-noi-dung.html" class="waves-effect waves-light"><i class="fa fa-file-text-o"></i> Trang nội dung</a></li>
+            <li><a href="../blog/blog.html" class="waves-effect waves-light"><i class="fa fa-comment"></i> Blog</a></li>
+            <li><a href="../menu/menu.html" class="waves-effect waves-light"><i class="fa fa-sitemap"></i> Menu</a></li>
+            <li><a href="../theme/theme.html" class="waves-effect waves-light"><i class="fa fa-tv"></i> Giao diện</a></li>
+            <li><a href="../file/file.html" class="waves-effect waves-light"><i class="fa fa-file-o"></i> File</a></li>
+            <hr>
+            <li><a class="collapsible-header waves-effect"><i class="fa fa-cogs"></i>Cấu hình <i class="fa fa-angle-down"></i></a>
+                <div class="collapsible-body">
+                    <ul>
+                        <li><a href="cau-hinh-chung.html" class="waves-effect"><i class="fa fa-cog"></i>Cấu hình chung</a></li>
+                        <li><a href="notification.html" class="waves-effect"><i class="fa fa-rss"></i>Thông báo</a></li>
+                        <li><a href="thanh-toan.html" class="waves-effect"><i class="fa fa-shopping-cart"></i>Thanh toán</a></li>
+                        <li><a href="tenmien.html" class="waves-effect"><i class="fa fa-globe"></i>Tên miền</a></li>
+                        <li><a href="account/account.html" class="waves-effect"><i class="fa fa-user"></i>Tài khoản</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!--/. Side navigation links -->
+    </ul>
+    <!--/. Sidebar navigation -->
+
+    <!--Navbar-->
+    <nav class="double-navbar navbar navbar-fixed-top elegant-color z-depth-1" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header pull-left">
+                <!-- SideNav slide-out button -->
+                <a href="#" data-activates="slide-out" class="navbar-brand button-collapse hidden-md hidden-lg"><i class="material-icons">menu</i></a>
+                <!--/. SideNav slide-out button -->
+                <h5 class="hidden-xs hidden-sm"><i class="fa fa-shopping-cart"></i> Cấu hình thanh toán</h5>
+            </div>
+
+            <!-- Navbar Icons -->
+            <ul class="list-inline pull-right text-center">
+                <li><a id="success_msg_1" onClick="toastr.success('Cập nhật cấu hình hệ thống thành công !!!', null, opts);" class="btn btn-primary"> Lưu </a>
+            </ul>
+            <!--/. Navbar Icons -->
+        </div>
+    </nav>
+    <!--/.Navbar-->
+    <main>
+        <div id="main-wapper">
+            <div class="container-fluid">
+                <!-- Các phương thức thanh toán -->
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h5>Thanh toán được chấp nhận</h5>
+                            <p class="sub2">Các hình thức thanh toán khi đặt tour</p>
+                        </div>
+                        <div class="col-md-8">
+                            <!-- Onepay_ATM -->
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <img src="../../../../img/thanh-toan/onepay_atm.jpg" alt="" class="img-responsive">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>Cửa hàng của bạn chưa cấu hình thanh toán online bằng thẻ nội địa (ATM). Để tìm hiểu thêm về OnePay và các thông tin khác vui lòng <a href="#">xem tại đây</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body">
+                                        <a href="#" class="btn btn-primary pull-right" id="show-panel-onepay-atm">Thiết lập</a>
+                                        <div class="panel panel-default" id="panel-onepay-atm">
+                                            <div class="panel-body">
+                                                <label class="color7"><b>Tên phương thức</b></label>
+                                                <input type="text" value="Thanh toán online qua thẻ nội địa (ATM)" class="color7">
+                                                <br>
+                                                <label id="error-merchant-atm" class="color7"><b>Tài khoản Merchant</b></label>
+                                                <input id="Merchant-atm" type="text" class="color7">
+                                                <br>
+                                                <label id="error-hashcode-atm" class="color7"><b>Hashcode</b></label>
+                                                <input id="Hashcode-atm" type="text" class="color7">
+                                                <br>
+                                                <label id="error-asscesscode-atm" class="color7"><b>AccessCode</b></label>
+                                                <input id="Assesscode-atm" type="text" class="color7">
+                                                <br>
+                                                <label class="color7"><b>Hướng dẫn thanh toán</b></label>
+                                                <label>– Hiển thị ở trang thông báo mua hàng thành công và trang thanh toán.</label>
+                                                <textarea type="text" class="materialize-textarea color7"></textarea>
+                                                <br>
+                                            </div>
+                                            <div class="panel-footer">
+                                                <a class="btn btn-default" id="hide-panel-onepay-atm">Hủy</a>
+                                                <a class="btn btn-primary" id="save-onepay-atm">Lưu</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <!-- Onepay_ATM -->
+
+                            <!-- Onepay_Visa -->                                
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <img src="../../../../img/thanh-toan/onepay_visa.jpg" alt="" class="img-responsive">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>Cửa hàng của bạn chưa cấu hình thanh toán online qua thẻ quốc tế (Visa/Master Card). Để tìm hiểu thêm về OnePay và các thông tin khác vui lòng <a href="#">xem tại đây</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body">
+                                        <a href="#" class="btn btn-primary pull-right" id="show-panel-onepay-visa">Thiết lập</a>
+                                        <div class="panel panel-default" id="panel-onepay-visa">
+                                            <div class="panel-body">
+                                                <label class="color7"><b>Tên phương thức</b></label>
+                                                <input type="text" value="Thanh toán online qua thẻ quốc tế (Visa/Master Card)" class="color7">
+                                                <br>
+                                                <label id="error-merchant-visa" class="color7"><b>Tài khoản Merchant</b></label>
+                                                <input id="Merchant-visa" type="text" class="color7">
+                                                <br>
+                                                <label id="error-hashcode-visa" class="color7"><b>Hashcode</b></label>
+                                                <input id="Hashcode-visa" type="text" class="color7">
+                                                <br>
+                                                <label id="error-asscesscode-visa" class="color7"><b>AccessCode</b></label>
+                                                <input id="Assesscode-visa" type="text" class="color7">
+                                                <br>
+                                                <label class="color7"><b>Hướng dẫn thanh toán</b></label>
+                                                <label>– Hiển thị ở trang thông báo mua hàng thành công và trang thanh toán.</label>
+                                                <textarea type="text" class="materialize-textarea color7"></textarea>
+                                                <br>
+                                            </div>
+                                            <div class="panel-footer">
+                                                <a class="btn btn-default" id="hide-panel-onepay-visa">Hủy</a>
+                                                <a class="btn btn-primary" id="save-onepay-visa">Lưu</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <!-- Onepay_Visa-->
+
+                            <!-- Ngân lượng -->                                
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <img src="../../../../img/thanh-toan/nganluong.png" alt="" class="img-responsive">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>Cửa hàng của bạn chưa cấu hình thanh toán qua Ngân Lượng. Để tìm hiểu thêm về Ngân lượng và các thông tin khác vui lòng <a href="#">xem tại đây</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body">
+                                        <a class="btn btn-primary pull-right" id="show-panel-nganluong">Thiết lập</a>
+                                        <div class="panel panel-default" id="panel-nganluong">
+                                            <div class="panel-body">
+                                                <label class="color7"><b>Tên phương thức</b></label>
+                                                <input type="text" value="Thanh toán qua Ngân Lượng" class="color7">
+                                                <br>
+                                                <label id="error-matichhop-nganluong" class="color7"><b>Mã website tích hợp</b></label>
+                                                <input id="matichop-nganluong" type="text" class="color7">
+                                                <br>
+                                                <label id="error-xacnhanma-nganluong" class="color7"><b>Xác nhận mã tích hợp</b></label>
+                                                <input id="xacnhanma-nganluong" type="text" class="color7">
+                                                <br>
+                                                <label id="error-emailthanhtoan-nganluong" class="color7"><b>Email thanh toán</b></label>
+                                                <input id="emailthanhtoan-nganluong" type="text" class="color7">
+                                                <br>
+                                                <label id="error-accesscode-nganluong" class="color7"><b>AccessCode</b></label>
+                                                <input id="accesscode-nganluong" type="text" class="color7">
+                                                <br>
+                                                <label class="color7"><b>Hướng dẫn thanh toán</b></label>
+                                                <label>– Hiển thị ở trang thông báo mua hàng thành công và trang thanh toán.</label>
+                                                <textarea type="text" class="materialize-textarea color7"></textarea>
+                                                <br>
+                                            </div>
+                                            <div class="panel-footer">
+                                                <a class="btn btn-default" id="hide-panel-nganluong">Hủy</a>
+                                                <a class="btn btn-primary" id="save-nganluong">Lưu</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <!-- Ngân lượng-->
+
+                        </div>
+                    </div>
+                <!-- Các phương thức thanh toán -->
+
+                <!-- Tài khoản khách hàng -->
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h5>Tài khoản khách hàng</h5>
+                            <p class="sub2">Bạn có thể chọn chỉ những khách hàng có đăng ký tài khoản mới có thể mua hàng.</p>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <input class="with-gap" type="radio" id="vohieuhoa-account" name="check1">
+                                    <label for="vohieuhoa-account">Vô hiệu chức năng tài khoản</label>
+                                    <p class="sub2 color7">Khách hàng chỉ có thể thanh toán là khách</p> <br>
+                                    <input class="with-gap" type="radio" id="batbuoc-account" name="check1">
+                                    <label for="batbuoc-account">Bắt buộc có tài khoản</label>
+                                    <p class="sub2 color7">Khách hàng chỉ có thể thanh toán nếu đăng ký tài khoản</p> <br>
+                                    <input class="with-gap" checked="checked" type="radio" id="kbatbuoc-account" name="check1">
+                                    <label for="kbatbuoc-account">Không bắt buộc có tài khoản</label>
+                                    <p class="sub2 color7">Khách hàng có thể thanh toán mà không cần tài khoản</p> <br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <!-- Tài khoản khách hàng -->
+
+                <!-- Thông tin thanh toán -->
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h5>Thông tin thanh toán</h5>
+                            <p class="sub2">Thông tin thanh toán Bạn có thể chọn các thông tin mà khách hàng cần cung cấp mỗi khi thanh toán. Chúng tôi khuyến khích tắt các thông tin không cần thiết với bạn..</p>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                   <ul class="list-group">
+                                       <li class="list-group-item">
+                                           <p class="sub2 color7"><b>Số điện thoại</b></p>
+                                           <input class="with-gap" checked="checked" type="radio" name="check2" id="an1">
+                                           <label for="an1">Ẩn</label> <br>
+                                           <input class="with-gap" type="radio" name="check2" id="kbatbuoc1">
+                                           <label for="kbatbuoc1">Không bắt buộc</label> <br>
+                                           <input class="with-gap" type="radio" name="check2" id="batbuoc1">
+                                           <label for="batbuoc1">Bắt buộc</label> <br>
+                                       </li>
+                                       <li class="list-group-item">
+                                           <p class="sub2 color7"><b>Địa chỉ</b></p>
+                                           <input class="with-gap" type="radio" name="check4" id="an2">
+                                           <label for="an2">Ẩn</label> <br>
+                                           <input class="with-gap" type="radio" name="check4" id="kbatbuoc2">
+                                           <label for="kbatbuoc2">Không bắt buộc</label> <br>
+                                           <input class="with-gap"  checked="checked" type="radio" name="check4" id="batbuoc2">
+                                           <label for="batbuoc2">Bắt buộc</label> <br>
+                                       </li>
+                                       <li class="list-group-item">
+                                           <p class="sub2 color7"><b>Quận / Huyện</b></p>
+                                           <input class="with-gap" type="radio" name="check3" id="an3">
+                                           <label for="an3">Ẩn</label> <br>
+                                           <input class="with-gap" checked="checked" type="radio" name="check3" id="kbatbuoc3">
+                                           <label for="kbatbuoc3">Không bắt buộc</label> <br>
+                                           <input class="with-gap" type="radio" name="check3" id="batbuoc3">
+                                           <label for="batbuoc3">Bắt buộc</label> <br>
+                                       </li>
+                                   </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <!-- Thông tin thanh toán -->
+
+                <!-- Xử lý đơn hàng -->
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h5>Xử lý đơn hàng</h5>
+                            <p class="sub2">Thay đổi quy trình xử lý trên website của bạn.</p>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <p class="color7 sub2"><b>Thông tin người nhận hàng</b></p>
+                                            <input type="checkbox" id="ck1" checked="checked">
+                                            <label for="ck1">Mặc định bật thông tin nhận hàng giống với thông tin thanh toán </label><br><br>
+                                            &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<em class="color7">Khách hàng sẽ phải cung cấp ít thông tin hơn khi thanh toán. Khách hàng vẫn có thể thay đổi địa chỉ nhận hàng nếu muốn.</em>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <p class="color7 sub2"><b>Tự động lưu trữ đơn hàng</b></p>
+                                            <input type="checkbox" id="ck2">
+                                            <label for="ck2">Mặc định bật thông tin nhận hàng giống với thông tin thanh toán </label>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <p class="color7 sub2"><b>Tự động lưu trữ đơn hàng</b></p>
+                                            <p class="color7 sub2">Các thông báo, hướng dẫn bạn muốn xuất hiện ở trang thông báo mua hàng thành công sau khi thanh toán. Đây là một nơi thích hợp để đặt các mã theo dõi đơn hàng, ROI</p>
+                                            <textarea class="materialize-textarea"></textarea>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <!-- Xử lý đơn hàng -->
+
+                <!-- Điều khoản sử dụng, bảo mật, hoàn trả -->
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h5>Điều khoản sử dụng, bảo mật, hoàn trả</h5>
+                            <p>Các chính sách.</p>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p class="color7 sub2"><b>Chính sách hoàn trả</b></p>
+                                                    <em class="text-muted">Các chính sách hoàn tiền lại cho khách</em>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <a id="btn-hoantra" class="btn btn-default pull-right">Sử dụng nội dụng mẫu</a>
+                                                </div>
+                                            </div>
+                                            <textarea id="mau-hoantra" class="materialize-textarea"></textarea>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p class="color7 sub2"><b>Chính sách bảo mật </b></p>
+                                                    <em class="text-muted">Website của bạn thu thập những dữ liệu nào?</em>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <a id="btn-baomat" class="btn btn-default pull-right">Sử dụng nội dung mẫu</a>
+                                                </div>
+                                            </div>
+                                            <textarea id="mau-baomat" class="materialize-textarea"></textarea>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p class="color7 sub2"><b>Điều khoản sử dụng  </b></p>
+                                                    <em class="text-muted">Điều khoản dịch vụ kinh doanh</em>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <a id="btn-dieukhoan" class="btn btn-default pull-right">Sử dụng nội dung mẫu</a>
+                                                </div>
+                                            </div>
+                                            <textarea id="mau-dieukhoan" class="materialize-textarea"></textarea>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <!-- Điều khoản sử dụng, bảo mật, hoàn trả -->
+
+                <!-- ngôn ngữ -->
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h5>Ngôn ngữ trang thanh toán</h5>
+                            <p class="sub2">Tùy chỉnh ngôn ngữ trang thanh toán của cửa hàng của bạn.</p>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                   <div class="row">
+                                       <div class="col-md-6">
+                                           <p class="color7">Ngôn ngữ đang sử dụng: <b>Tiếng Việt</b></p>
+                                       </div>
+                                       <div class="col-md-6">
+                                           <a class="btn btn-default pull-right">Chỉnh sửa</a>
+                                       </div>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <!-- ngôn ngữ -->
+            </div>
+        </div>
+    </main>
+</body>
+</html>

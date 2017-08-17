@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Travel Market</title>
+	<!-- CSS -->
+	<link rel="stylesheet" href="../../../plugin/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../plugin/css/mdb.pro.css">
+    <link rel="stylesheet" href="../../../plugin/css/mdb.css">
+    <link rel="stylesheet" href="../../../plugin/css/tour.css">
+    <link rel="stylesheet" href="../../../plugin/css/page-main.css">
+    <link rel="stylesheet" href="../../../plugin/font/font-awesome/css/font-awesome.min.css">
+    <!-- ./ CSS -->
+	<!-- Jquery -->
+    <script src="../../../plugin/js/jquery.min.js"></script>
+    <script src="../../../plugin/js/bootstrap.min.js"></script>
+    <script src="../../../plugin/js/mdb.min.pro.js"></script>
+    <script src="../../../plugin/js/nicescroll.js"></script>
+    <script src="../../../plugin/js/subizchat.js"></script>
+    <!-- ./ Jquery -->
+    <!-- Main Jquery -->
+    <script>
+        $(document).ready(function(){
+            $("html").niceScroll();
+
+            $(".carousel").carousel();
+
+            $(".main-nav").scroller();
+
+            $(".datepicker").pickadate({
+                selectMonths: true,
+                selectYears: 15
+            });
+        });
+    </script>
+    <!-- /. Main Jquery -->
+</head>
+<body>
+    <!-- Navigation -->
+         <nav class="navbar blue navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand waves-effect waves-light" href="../../../home.html">
+                        <img src="../../../img/logo.png" alt="" class="img img-responsive center-block">
+                    </a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="../../../home.html">Trang chủ</a></li>
+                        <li><a href="../../../home.html#dichvu">Dịch vụ</a></li>
+                        <li><a href="../../../home.html#gioithieu">Giới thiệu</a></li>
+                        <li><a href="../../../home.html#tournoibat">Tour nổi bật</a></li>
+                        <li><a href="../../../home.html#tour">Tour</a></li>
+                        <li><a href="../../../home.html#tintuc">Tin tức</a></li>
+                        <li><a href="../../../home.html#doitac">Đối tác</a></li>
+                        <li><a href="../../../home.html#lienhe">Liên hệ</a></li>
+                        <li><a data-toggle="modal" data-target="#modalLogin"><i class="fa fa-user"></i> Đăng nhập</a></li>
+                        <li><a data-toggle="modal" data-target="#modalSignIn"><i class="fa fa-user-plus"></i> Đăng ký</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    <!-- /.Navigation -->
+    <!-- modal login -->
+        <div class="modal fade" id="modalLogin" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <h4><i class="fa fa-user"></i> Đăng nhập</h4>
+                    </div>
+                    <div class="modal-body" style="padding:40px 50px;">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="input-field">
+                                        <input id="icon_email" type="tel" class="validate">
+                                        <label for="icon_email">Email</label>
+                                    </div>
+
+                                    <div class="input-field">
+                                        <input id="password" type="password" class="validate">
+                                        <label for="password">Mật khẩu</label>
+                                    </div>
+
+                                    <div class="text-center">
+                                        <button type="button" class="btn btn-rounded btn-primary waves-effect waves-light">Đăng nhập</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Footer-->
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-floating btn-default pull-left" data-dismiss="modal">X</button>
+                        <div class="options">
+                        <p>Bạn chưa có tài khoản <a href="#" data-toggle="modal" data-target="#modalSignIn" data-dismiss="modal">Đăng ký</a></p>
+                        <p>Quên <a href="#">mật khẩu ?</a></p>
+                        </div>
+                    </div>
+                    <!--/.Footer-->
+                </div>
+                <!-- /.Modal content-->
+            </div>
+        </div>
+    <!-- modal login -->
+
+    <!-- Modal Sign -->
+        <div class="modal fade" id="modalSignIn" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <!--Header-->
+                    <div class="modal-header text-center">
+                        <h4>Đăng nhập với </h4>
+                        <a class="btn-floating btn-large fb-bg waves-effect waves-light"><i class="fa fa-facebook"> </i></a>
+                        <a class="btn-floating btn-large tw-bg waves-effect waves-light"><i class="fa fa-twitter"> </i></a>
+                        <a class="btn-floating btn-large gplus-bg waves-effect waves-light"><i class="fa fa-google-plus"> </i></a>
+                        <a class="btn-floating btn-large li-bg waves-effect waves-light"><i class="fa fa-linkedin"> </i></a>
+                    </div>
+                    <!--/.Header-->
+
+                    <!--Body-->
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <!--Form-->
+                                <form>
+                                    <h4 class="text-center">Tạo tài khoản</h4>
+
+                                    <div class="input-field">
+                                        <input id="icon_email" type="tel" class="validate">
+                                        <label for="icon_email">Họ tên</label>
+                                    </div>
+                                    
+                                    <div class="input-field">
+                                        <input id="icon_email" type="tel" class="validate">
+                                        <label for="icon_email">Email</label>
+                                    </div>
+
+                                    <div class="input-field">
+                                        <input id="password" type="password" class="validate">
+                                        <label for="password">Mật khẩu</label>
+                                    </div>
+
+                                    <div class="input-field">
+                                        <input id="password-rep" type="password" class="validate">
+                                        <label for="password-rep">Nhập lại mật khẩu</label>
+                                    </div>
+
+                                    <div class="text-center">
+                                        <button type="button" class="btn btn-primary btn-lg waves-effect waves-light">Đăng ký</button>
+                                    </div>
+
+                                </form>
+                                <!--/.Form-->
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.Body-->
+
+                    <!--Footer-->
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-default btn-default pull-left" data-dismiss="modal">X</button>
+                        <div class="options">
+                        <p>Bạn đã có tài khoản <a href="#" data-toggle="modal" data-target="#modalLogin" data-dismiss="modal">Login</a></p>
+                        </div>
+                    </div>
+                    <!--/.Footer-->
+                </div>
+            </div>
+        </div>
+    <!--/.Modal Sign-->
+    <div class="container">
+         <section class="parallax" id="id-example1">
+            <div class="container text-center">
+               <h4>ThaiLand</h4>
+               <p><a href="../../../../home.html">Trang chủ</a> / <a href="../../../home.html#tournoibat">tour nổi bật</a> / ThaiLand</p>
+               <div id="search">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <!-- nơi đến -->
+                                        <select class="form-control">
+                                            <option value="0" class="active">--Nơi đến--</option>
+                                            <option value="14">Ai Cập</option>
+                                            <option value="98">Ấn Độ</option>
+                                            <option value="169">Anh</option>
+                                            <option value="170">Áo</option>
+                                            <option value="127">Argentina</option>
+                                            <option value="160">Ba Lan</option>
+                                            <option value="220">Bhutan</option>
+                                            <option value="168">Bỉ</option>
+                                            <option value="157">Bồ Đào Nha</option>
+                                            <option value="126">Brazil</option>
+                                            <option value="102">Brunei</option>
+                                            <option value="5">Campuchia</option>
+                                            <option value="114">Canada</option>
+                                            <option value="128">Chile</option>
+                                            <option value="245">Croatia</option>
+                                            <option value="125">Cuba</option>
+                                            <option value="110">Đài Loan</option>
+                                            <option value="152">Đan Mạch</option>
+                                            <option value="167">Đức </option>
+                                            <option value="166">Hà Lan</option>
+                                            <option value="11">Hàn Quốc</option>
+                                            <option value="225">Hawaii</option>
+                                            <option value="13">Hoa Kỳ</option>
+                                            <option value="7">Hồng Kông &amp; Macau</option>
+                                            <option value="161">Hungary</option>
+                                            <option value="150">Hy Lạp</option>
+                                            <option value="111">Indonesia</option>
+                                            <option value="112">ISRAEL</option>
+                                            <option value="211">Jordan</option>
+                                            <option value="138">Kazakhstan</option>
+                                        </select>
+                                    <!-- nơi đến -->
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="date" class="datepicker" placeholder="Ngày bắt đầu" value="Ngày khởi hành">
+                                </div>
+                                <div class="col-md-2">
+                                    <select class="form-control">
+                                        <option>--Giá--</option>
+                                        <option>1 - 2 triệu</option>
+                                        <option>2 - 4 triệu</option>
+                                        <option>4 - 6 triệu</option>
+                                        <option>6 - 8 triệu</option>
+                                        <option>8 - 10 triệu</option>
+                                        <option>trên 10 triệu</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-2">
+                                    <select class="form-control">
+                                        <option>--Khuyến mãi--</option>
+                                        <option>Có</option>
+                                        <option>Không</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-2">
+                                    <select class="form-control">
+                                        <option>Còn chỗ</option>
+                                        <option>Hết chỗ</option>
+                                        <option>--Tất cả--</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-1">
+                                    <a href="#" class="btn btn-primary pull-left"><i class="fa fa-search"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+            </div>
+        </section>
+    </div>
+    <!-- Main -->
+        <section id="main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <!-- Carousel -->
+                            <div id="carousel1" class="carousel slide carousel-fade">
+
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carousel1" data-slide-to="0" class="active">
+                                    </li>
+                                    <li data-target="#carousel1" data-slide-to="1"></li>
+                                    <li data-target="#carousel1" data-slide-to="2"></li>
+                                    <li data-target="#carousel1" data-slide-to="3"></li>
+                                    <li data-target="#carousel1" data-slide-to="4"></li>
+                                    <li data-target="#carousel1" data-slide-to="5"></li>
+                                </ol>
+
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner z-depth-2" role="listbox">
+
+                                    <!-- First slide -->
+                                    <div class="item active">
+                                        <div class="view overlay hm-blue-slight">
+                                            <a><img src="img-slider/1.jpg" class="img-responsive" alt="slide1">
+                                                <div class="mask waves-effect waves-light"></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- /.item -->
+
+                                    <!-- Second slide -->
+                                    <div class="item">
+                                        <div class="view overlay hm-blue-slight">
+                                            <a><img src="img-slider/2.jpg" class="img-responsive" alt="slide2">
+                                                <div class="mask waves-effect waves-light"></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- /.item -->
+
+                                    <!-- Third slide -->
+                                    <div class="item">
+                                        <div class="view overlay hm-blue-slight">
+                                            <a><img src="img-slider/3.jpg" class="img-responsive" alt="slide3">
+                                                <div class="mask waves-effect waves-light"></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- /.item -->
+
+                                    <!-- Four slide -->
+                                    <div class="item">
+                                        <div class="view overlay hm-blue-slight">
+                                            <a><img src="img-slider/4.jpg" class="img-responsive" alt="slide3">
+                                                <div class="mask waves-effect waves-light"></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- /.item -->
+                                    
+                                    <!-- Five slide -->
+                                    <div class="item">
+                                        <div class="view overlay hm-blue-slight">
+                                            <a><img src="img-slider/5.jpg" class="img-responsive" alt="slide3">
+                                                <div class="mask waves-effect waves-light"></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- /.item -->
+
+                                    <!-- Six slide -->
+                                    <div class="item">
+                                        <div class="view overlay hm-blue-slight">
+                                            <a><img src="img-slider/6.jpg" class="img-responsive" alt="slide3">
+                                                <div class="mask waves-effect waves-light"></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- /.item -->
+                                </div>
+                                <!-- /.carousel-inner -->
+
+                                <!-- Controls -->
+                                <a class="left carousel-control new-control" href="#carousel1" role="button" data-slide="prev">
+                                    <span class="fa fa fa-angle-left waves-effect waves-light"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control new-control" href="#carousel1" role="button" data-slide="next">
+                                    <span class="fa fa fa-angle-right waves-effect waves-light"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                            </div>
+                            <!-- /.carousel -->
+                    </div>
+                    <div class="col-md-4">
+                        <h5 class=" text-center">ThaiLand</h5><br>
+                        <p>Thời gian : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>5 ngày</b></p>
+                        <p>Khởi hành : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>02/09/2016</b></p>
+                        <p>Nơi khởi hành : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Hồ Chí Minh</b></p>
+                        <p>Số chỗ còn nhận : &nbsp; <b>4</b></p>
+                        <p>Thái Lan có các danh lam thắng cảnh tuyệt đẹp, hệ thống chùa chiền nguy nga, tráng lệ, các khu vui chơi giải trí, các lễ hội truyền thống đặc sắc...".</p>
+                        <a href="#" class="btn btn-primary btn-rounded pull-right"> Đặt ngay</a>
+                    </div>
+                </div>
+                <hr>
+                <!-- dịch vụ đi kèm -->
+                <section id="dichvu">
+                    <h5 style="font-weight:300">Dịch vụ đi kèm</h5>
+                    <div class="underline"></div>
+                    <div class="row">
+                        <div class="col-md-2 text-center">
+                            <i class="fa fa-umbrella" style="color:#3892C5"></i>
+                            <p>Bảo hiểm</p>
+                        </div>
+                        <div class="col-md-2 text-center">
+                            <i class="fa fa-cutlery" style="color:#E83956"></i>
+                            <p>Bữa ăn theo chương trình</p>
+                        </div>
+                        <div class="col-md-2 text-center">
+                            <i class="fa fa-map-marker" style="color:#52DC55"></i>
+                            <p>Hướng dẫn viên</p>
+                        </div>
+                        <div class="col-md-2 text-center">
+                            <i class="fa fa-credit-card" style="color:#F3C420"></i>
+                            <p>Vé tham quan</p>
+                        </div>
+                        <div class="col-md-2 text-center">
+                            <i class="fa fa-bus" style="color:#D539D3"></i>
+                            <p>Xe đưa đón</p>
+                        </div>
+                    </div>
+                </section>
+                <!-- dịch vụ đi kèm -->
+
+                <!-- Chương trình -->
+                <section id="chuongtrinh">
+                    <h5 style="font-weight:300">Chương trình</h5>
+                    <div class="underline"></div><br>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <ul class="nav nav-tabs tabs-4">
+                                <li class="active"><a data-toggle="tab" href="#mota">Mô tả</a></li>
+                                <li><a data-toggle="tab" href="#giatour">Giá tour</a></li>
+                                <li><a data-toggle="tab" href="#luuy">Lưu ý</a></li>
+                                <li><a data-toggle="tab" href="#quydinh">Quy định</a></li>
+                            </ul>
+
+                            <div class="tab-content card-panel">
+
+                                <div id="mota" class="tab-pane fade in active">
+                                    <br>
+                                  <p> <em><b>Đặc điểm nổi bật:</b></em><br>
+                                        Thời  gian: 4 ngày 3 đêm <br>
+                                        Khởi hành: 02/05/2016 <br>
+                                        Phương tiện: Đi & Về bằng máy bay. <br>
+                                        Thưởng thức các món đặc sản ThaiLand <br>
+                                        Tham quan kỳ quan thứ 7 của thế giới <br><br>
+                                        <b>NGÀY 1:  TP. HỒ CHÍ MINH – BANGKOK ( Ăn sáng, Trưa, Chiều )</b> <br>
+                                        <b>Buổi sáng: </b>Trưởng đoàn đón Quý khách tại cổng hẹn ở sân bay Tân Sân Nhất, đón chuyến bay đi Bangkok. Đến sân bay Suvarnabhumi (nếu bay VietJet) hoặc sân bay Don Muong (nếu bay Air asia, Nok Air), xe và hướng dẫn viên địa phương đón và đưa Quý khách đến khách sạn dùng bữa tối và nhận phòng, nghỉ ngơi.<br><br>
+                                        <b>Buổi chiều: </b>Đến tỉnh AICKLAND, xe qua cầu Japanese – AICKLAND bắc ngang sông Tonle Bat. Đoàn dùng cơm trưa tại nhà hàng địa phương, sau đó tiếp tục khởi hành đi AICKLAND. Đoàn dừng chân tham quan chợ AICKLAND  thưởng thức món Bánh Bò Thốt Nốt đặc sản địa phương (chi phí tự túc), đoàn tham quan cầu Kompong Kdei được xây dựng từ thế kỉ thứ 12 với cấu trúc bằng Đá Ong cực kỳ độc đáo. <br><br>
+                                        <b>Buổi tối:</b> Đoàn đến Katthay quý khách dùng bữa tối tại nhà hàng đưa quý khách về khách sạn nhận phòng nghỉ ngơi. Tự do khám phá thành phố đền tháp cổ kính về đêm. <br><br>
+                                        <b>NGÀY 2: BANGKOK - KATTATA ( Ăn Sáng, trưa, Chiều )</b><br>
+                                         <b>Buổi sáng:</b> Đoàn dùng Buffet sáng tại khách sạn. Sau đó xe đưa đoàn đi tham quan cổng nam ROTORUA, một ngôi đền cổ rộng lớn với những điêu khắc và hoa văn độc đáo trên từng centimet gắn liền với sự tích văn hoá và phát triển của dân tộc Khmer. Quý khách tiếp tục tham quan Đền Bayon 4 mặt với nụ cười bí ẩn của Phật, Quảng Trường Đấu Voi, cung điện của Đức Vua từ thế kỉ thứ 12…. Đoàn dùng cơm trưa và nghỉ ngơi. <br><br>
+                                        <b>Buổi chiều:</b> Đến Pattaya, tham quan <strong><em>Bảo Tàng Tranh 3D</em></strong> - hàng trăm không gian 3D kỳ ảo từ thời nguyên thủy tới hiện đại cuốn hút du khách, được xem là bảo tàng 3D đầu tiên và lớn nhất ở Thái Lan với diện tích hơn 5.800 m2 cùng hơn 200 hình họa, với nhiều chủ đề, nội dung. Quý khách tham quan <strong><em>Ngôi Nhà Tỷ Phú (Baan Sukhawadee)</em></strong> - được xây dựng tráng lệ, nguy nga bên bờ biển, mô phỏng theo cung điện Versailles tại Pháp <br><br>
+                                        <b>Buổi tối:</b> 19:00: Quý khách sẽ dùng Buffet tối tại nhà hàng và thưởng thức chương trình ca múa nhạc Apsara truyền thống với vũ công trong vũ điệu tiên nữ uyển chuyển. (cuối giờ quý khách có thể chụp hình cùng các cô vũ công múa Apsara). <br><br>
+                                        <b>NGÀY 3:  PATTAYA ( Ăn Sáng, trưa, Chiều ) </b><br>     
+
+                                        <b>Buổi sáng:</b> Đoàn dùng Buffet sáng tại khách sạn, làm thủ tục trả phòng sau đó khởi hành về lại PhnomPenh. Trên đường xe sẽ cho quý khách tham quan Chợ Nhện (nơi bán những món ăn làm từ côn trùng như nhện, dế,..) <br>
+                                        Đến Thủ Đô BangKok, xe đưa đoàn đi dùng cơm trưa tại nhà hàng, đoàn về khách sạn nhận phòng, Nghỉ ngơi. <br><br>
+                                        <b>Buổi chiều:</b> Xe đưa đoàn đi tham quan chợ Phsa Thmey (chợ Lớn Mới) hoặc Chợ Orussey (chợ Cây Tre),mua sắm đặc sản và đồ lưu niệm Cambodia .Xe đưa đoàn thử vận may tại sòng bài Naga Resort đẹp và sang trọng nhất Cambodia.<br><br>
+                                        <b>Buổi tối:</b> Xe đưa đoàn đi dùng cơm tối ở nhà hàng lẩu Băng chuyền Sou Sou. Quý khách về khách sạn nghỉ ngơi.<br><br>
+                                        <b>NGÀY 4: ROTORUA – TP.HỒ CHÍ MINH ( Ăn Sáng, trưa )</b> <br> 
+
+                                        <b>Buổi sáng:</b>  Qúy khách dùng Buffet sáng và trả phòng khách sạn. Đoàn khởi hành tham quan Hoàng Cung nơi ở của hoàng gia đương đại, Chùa Vàng, chùa Bạc rực rỡ với Ngọc Lục Bảo nổi tiếng của Cambodia. Sau đó tham quan đài tưởng niệm Việt Nam – Cambodia, chụp hình tại Quảng Trường Độc Lập Sau đó trả phòng khách sạn khởi hành về lại Tp.Hồ Chí Minh. <br><br>
+
+                                        <b>Buổi chiều:</b> Đoàn dùng cơm trưa tại Nhà Hàng , Trên đường đoàn được ngắm nhìn cầu  NeakLuong, tiếp tục lịch trình về Mộc Bài. Đến cửa khẩu Mộc Bài, HDV sẽ giúp khách làm thủ tục về lại Việt Nam.<br><br>
+
+                                        Sau đó xe đưa quý khách trở về điểm đón ban đầu kết thúc chương trình tham quan, chia tay và hẹn   gặp lại quý khách trên mọi nẻo đường quê hương <br>
+
+                                        <em><b>( Chương trình có thể thay đổi tùy vào tình hình thực tế nhưng vẫn đảm bảo điểm tham quan của quý khách)</b></em><br><br>
+                        
+                                        TRAVELMARKET  Hy Vọng Sẽ Mang Lại Những Sự Chọn Lựa Hài Lòng Cho Quý Khách</p>
+                                </div>
+
+                                <div id="giatour" class="tab-pane fade">
+                                    <br>
+                                    <p>Giá tour</p>
+                                  <h5>14.990.000 VND</h5>
+                                  <p><b>Điều kiện đăng ký tour</b></p>
+                                  <p>
+                                    Hộ chiếu còn hạn sử dụng ít nhất 6 tháng (tính đến ngày khởi hành) <br>
+                                    Khách mang quốc tịch nước ngoài phải có thị thực nhập cảnh Việt Nam còn hạn sử dụng tính đến ngày khởi hành. <br>
+                                    Khách có giấy phép miễn thị thực Việt Nam không được lưu trú tại Việt Nam quá 90 ngày tính từ ngày nhập cảnh. <br>
+                                    Vui lòng cung cấp thông tin cá nhân: Họ tên đầy đủ và chính xác theo hộ chiếu, số điện thoại, địa chỉ liên lạc… <br>
+                                  </p>
+                                  <p class="text-center uppercase"><b>Giá tour bao gồm </b></p>
+                                  <table class="table">
+                                      <tbody>
+                                          <tr>
+                                              <td><b>Vận chuyển</b></td>
+                                              <td>Xe đời mới máy lạnh theo lộ trình tour.</td>
+                                          </tr>
+                                          <tr>
+                                              <td><b>Lưu trú</b></td>
+                                              <td>
+                                                Khách sạn tiêu chuẩn 4-3 sao quốc tế (2-3 khách/phòng) <br>
+                                                Siem Riep: Starry Angkor Hotel, Lucky Angkor…( 4 sao)
+                                                <br>Phnompenh: Diamond Hotel, Aisa Tune Hotel...( 3 sao )
+                                                <br>( Hoặc khách sạn tương đương )
+                                              </td>
+                                          </tr>
+                                          <tr>
+                                              <td><b>Ăn uống</b></td>
+                                              <td>Theo chương trình 7 buổi ăn chính (bao gồm 1 bữa ăn tối Buffet, 1 bữa lẩu băng chuyền)
+                                                <br>Trên đường đi phục vụ khăn lạnh, nước suối 01 chai nước 500ml/ngày.</td>
+                                          </tr>
+                                          <tr>
+                                              <td><b>Hướng dẫn viên</b></td>
+                                              <td>Hướng dẫn viên tiếng Việt đi theo phục vụ suốt tuyến</td>
+                                          </tr>
+                                          <tr>
+                                              <td><b>Bảo hiểm</b></td>
+                                              <td>Bảo hiểm du lịch trọn tour mức đền bù tối đa <b>210.000.000 VND/vụ</b></td>
+                                          </tr>
+                                          <tr>
+                                              <td><b>Tham quan</b></td>
+                                              <td>Vé vào cửa tất cả các điểm tham quan theo chương trình</td>
+                                          </tr>
+                                      </tbody>
+                                  </table>
+                                  <br>
+                                  <p class="text-center uppercase"><b>Giá tour không bao gồm</b></p>
+                                  <p>
+                                    -  Vé tham quan các điểm ngoài chương trình <br>
+                                    -  Visa Campuchia <b>788.000 vnd</b> và visa tái nhập VN <b>1.575.000 vnd</b> đối với khách mang quốc tịch nước ngoài.
+                                    <br>(Quốc tịch Việt Nam không tốn tiền Visa ) <br>
+                                    -  Các chi phí cá nhân khác như: Điện thoại, giặt ủi, mua sắm, nước uống. <br>
+                                    -  Tiền TIP cho tài xế và hướng dẫn viên địa phương: <b>65.000 VND/ngày ( Áp dụng cho người lớn và trẻ em )</b><br>
+                                    -  Phụ thu phòng đơn:  <b>15.085.000  VNĐ/ 3 đêm.</b> <br>
+                                    </p>
+                                    <p class="text-center uppercase"><b>Giá vé trẻ em</b></p>
+                                    <p>
+                                        - Từ 12 tuổi trở lên : Mua 01 vé <br>
+                                        - Từ 6 đến 11 tuổi   : Mua 75% vé <br>
+                                        - Từ 2 đến 5 tuổi    : Mua 50% vé <br>
+                                        - Dưới 2 tuổi Phụ thu <b>320.000VND</b>. Không tính vé, gia đình tự lo. 2 người lớn chỉ được kèm 1 trẻ em, nếu trẻ em đi kèm nhiều hơn thì từ em thứ 2 trở lên phải mua ½ vé. <br>
+                                        <em>Ghi chú: Tiêu chuẩn ½ vé được 1 suất ăn + 1 ghế ngồi và ngủ chung với gia đình.</em>
+                                    </p>
+                                </div>
+
+                                <div id="luuy" class="tab-pane fade">
+                                    <br>
+                                  <p class="uppercase"><b>Điều kiện hủy tour</b></p>
+                                  <p>
+                                    - Sau 10 ngày 100% giá tour <br>
+                                    - 5-10 ngày 75% giá tour <br>
+                                    - 3-5 ngày 50% giá tour <br>
+                                    - 0-3 ngày 30% giá tour <br>
+                                  </p>
+                                </div>
+
+                                <div id="quydinh" class="tab-pane fade">
+                                    <br>
+                                  <p class="uppercase"><b>Quy định đặt tour Travel market</b></p>
+                                  <p>
+                                    - Quý khách vui lòng đọc kỹ chương trình, giá tour, các khoản bao gồm cũng như không bao gồm trong chương trình, các điều kiện hủy tour. Trong trường hợp Quý khách không trực tiếp đến đăng ký tour mà do người khác đến đăng ký thì Quý khách vui lòng tìm hiểu kỹ chương trình từ người đăng ký cho mình, Travelmarket.vn sẽ gửi email đến Quý khách ( nếu có).
+                                    <br><br>
+                                    - Quý khách từ 70 tuổi đến dưới 75 tuổi yêu cầu ký cam kết sức khỏe với Công ty.
+                                    <br> <br>
+                                    - Quý khách từ 75 tuổi trở lên yêu cầu phải có giấy xác nhận đầy đủ sức khoẻ để đi du lịch nước ngoài của bác sĩ + giấy cam kết sức khỏe với Công ty và phải có người thân dưới 60 tuổi (đầy đủ sức khoẻ) đi theo. Ngoài ra, khách trên 75 tuổi vui lòng đóng thêm phí bảo hiểm cao cấp (phí thay đổi tùy theo tour).
+                                    <br> <br>
+                                    - Không nhận khách từ 80 tuổi trở lên.
+                                    <br> <br>
+                                    - Không nhận khách có thai từ 5 tháng trở lên tham gia các tour du lịch nước ngoài vì lí do an toàn cho khách.
+                                    <br> <br>
+                                    - Do các chuyến bay phụ thuộc vào các hãng Hàng Không nên trong một số trường hợp giờ bay có thể thay đổi mà không được báo trước.
+                                    <br> <br>
+                                    - Tùy vào tình hình thực tế, thứ tự các điểm tham quan trong chương trình có thể thay đổi nhưng vẫn đảm bảo đầy đủ các điểm tham quan.
+                                    <br> <br>
+                                    - Chúng tôi sẽ không chịu trách nhiệm bảo đảm các điểm tham quan trong trường hợp:
+                                    <br> <br>
+                                    ** Thiên tai: Bão lụt, hạn hán, động đất…
+                                    <br> <br>
+                                    ** An ninh: Khủng bố, biểu tình
+                                    <br> <br>
+                                    ** Hàng không: Trục trặc kỹ thuật, an ninh, dời, hủy, hoãn chuyến bay.
+                                    <br> <br>
+                                    Nếu những trường hợp trên xảy ra, Travelmarket.vn sẽ xem xét để hoàn trả chi phí không tham quan cho khách trong điều kiện có thể và phụ thuộc vào đơn vị tổ chức hoặc đối tác tại nước sở tại (sau khi đã trừ lại các dịch vụ đã thực hiện như phí làm visa….và không chịu trách nhiệm bồi thường thêm bất kỳ chi phí nào khác).
+                                    <br> <br>
+                                    Thời gian hoàn tiền: từ 5 – 30 ngày kể từ ngày thông báo hủy. <br>
+                                  </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Chương trình -->
+
+                <!-- tour nổi bật -->
+                
+                <!-- tour nổi bật -->
+            </div>
+        </section>
+    <!-- Main -->
+    <!-- Thống kê -->
+    <section class="parallax" id="id-example2">
+        <div class="container text-center">
+            <a class="btn-floating btn-large fb-bg waves-effect waves-light"><i class="fa fa-facebook"> </i></a>
+            <a class="btn-floating btn-large tw-bg waves-effect waves-light"><i class="fa fa-twitter"> </i></a>
+            <a class="btn-floating btn-large gplus-bg waves-effect waves-light"><i class="fa fa-google-plus"> </i></a>
+            <a class="btn-floating btn-large li-bg waves-effect waves-light"><i class="fa fa-linkedin"> </i></a>
+            <a class="btn-floating btn-large ins-bg waves-effect waves-light"><i class="fa fa-instagram"> </i></a>
+        </div>
+    </section>
+    <!-- ./ thống kê -->
+
+    <!-- footer -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p>Công ty TNHH thương mại cổ phần T - T Company of Joint Stock and Commerce <br>
+                        Trụ sở: 5, Trường Chinh, Thanh Bình, Hải Dương <br>
+                        Email: tuanAdmin@gmail.com <br>
+                        66 77 2508</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    <!-- ./ Footer -->
+</body>
+</html>

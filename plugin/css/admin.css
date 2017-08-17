@@ -1,0 +1,189 @@
+
+/*Trang chủ*/
+.navbar{
+	height: 88px;
+}
+.logo-wrapper{
+	height: 88px;
+}
+.dark-side-nav .logo-wrapper{
+	background: none;
+}
+.side-nav a{
+	height: 29px;
+	line-height: 27px;
+	border: none;
+	font-size: 10pt;
+}
+.admin-side-nav.dark-side-nav li{
+	border: none;
+}
+.navbar-header h5{
+	margin-left: 240px;
+	color: #FFF;
+	font-size: 14pt;
+}
+.collapsible input[type="text"]{
+	width: 80%;
+	margin: 5px 20px;
+	padding-left: 10px;
+	color: #FFF;
+}
+hr{
+	width: 80%;
+	border-color:#E5E5E5;
+}
+#main-wapper{
+	padding-top: 120px;
+	padding-left: 18%;
+}
+main{
+	    background-color: #CDCDCD;
+}
+
+#main-wapper .panel-body{
+	color: #FFF;
+	border-radius: 5px;
+}
+#main-wapper .panel-note{
+	color: #333
+}
+.color1{
+	background-color: #357EBD;
+}
+.color2{
+	background-color: #26C281;
+}
+.color3{
+	background-color: #1C2A3C;
+}
+.color4{
+	background-color: #D95043;
+}
+.color5{
+	background-color: #E6E8EA;
+}
+.color6{
+	color: #BABABA;
+}
+.color7{
+	color: #333;
+}
+#main-wapper .table{
+	color: #333;
+}
+.btn-default{
+	background-color: #EFEFEF;
+	color: #64A7E6
+}
+.modal-body label{
+	font-weight: 300
+}
+#main-wapper .panel-chart .table tbody tr td{
+	line-height: 50px;
+}
+
+
+
+/*Đơn hàng*/
+#main-wapper .panel-donhang{
+	color: #333;
+}
+#main-wapper .panel-donhang input[type="text"]{
+	padding-left: 15px;
+	border: none;
+	border: 1px solid#DDD;
+	width: 99%;
+	height: 32px;
+	margin-left: -30px;
+	border-left: none;
+
+}
+#main-wapper .panel-donhang input[type="text"]:focus{
+	border-bottom: none;
+}
+#main-wapper select{
+	border: 1px solid#DDD;
+}
+
+/*tour*/
+
+.navbar h5 a{
+	color: #FFF;
+}
+
+#themtour p{
+	font-size: 14px;
+}
+#themtour input[type="text"],textarea{
+	color: #333;
+	padding-left: 15px;
+	width: 97%;	
+}
+#themtour label{
+	font-size: 15px;
+}
+#themtour textarea{
+	padding-left:15px;
+	padding-top: 15px;
+}
+#themtour i{
+	color: #333;
+}
+
+#gia{
+	border: 1px solid#DDD;
+}
+#gia:focus{
+	border: 1px solid#DDD
+}
+
+.sub2{
+	font-size: 10.7pt;
+	font-weight: 400
+}
+
+#txtEditor {
+	color: #333;
+}
+.published-theme{
+	background-image: url("../../img/macbook-frame1.png");
+    background-position: 0 1px;
+    background-repeat: no-repeat;
+    height: 469px;
+    margin: 0 auto;
+    position: relative;
+    width: 800px;
+    overflow: hidden;
+}
+.published-theme iframe {
+    backface-visibility: hidden;
+    background-color: #fff;
+    border: medium none;
+    height: 694px;
+    margin-left: 30px;
+    overflow: hidden;
+    pointer-events: none;
+    position: relative;
+    top: 60px;
+    transform: scale(.59);
+    -webkit-transform: scale(.59);
+    -moz-transform: scale(.59);
+    transform-origin: 0 0 0;
+    -webkit-transform-origin: 0 0 0;
+    -moz-transform-origin: 0 0 0;
+    transform-style: preserve-3d;
+    transition: all .3s ease-in-out 0s;
+    width: 1259px;
+}
+
+@media(max-width: 1000px){
+	#main-wapper{
+		padding-left: 0;
+	}
+}
+/*@media(max-width: 800px){
+	#main-wapper{
+		padding-left: 20%;
+	}
+}*/

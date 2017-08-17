@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Travel Market</title>
+    <!-- Material Design Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- CSS -->
+	<link rel="stylesheet" href="../../../../plugin/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../plugin/css/mdb.pro.css">
+    <link rel="stylesheet" href="../../../../plugin/css/mdb.css">
+    <link rel="stylesheet" href="../../../../plugin/css/admin.css">
+    <link rel="stylesheet" href="../../../../plugin/font/font-awesome/css/font-awesome.min.css">
+    <!-- ./ CSS -->
+	<!-- Jquery -->
+    <script src="../../../../plugin/js/jquery.min.js"></script>
+    <script src="../../../../plugin/js/mdb.min.pro.js"></script>
+    <script src="../../../../plugin/js/chart.min.js"></script>
+    <script src="../../../../plugin/js/bootstrap.min.js"></script>
+    <script src="../../../../plugin/js/nicescroll.js"></script>
+    <script src="../../../../plugin/js/backTop.js"></script>
+    <script src="../../../../plugin/js/validate.js"></script>
+    <!-- ./ Jquery -->
+    <!-- Main Jquery -->
+    <script>
+        $(document).ready(function(){
+            $("html").niceScroll();
+            $('.button-collapse').sideNav();
+            $('.collapsible').collapsible();
+        });
+    </script>
+    <!-- /. Main Jquery -->
+</head>
+<body>
+    
+    <!-- Sidebar navigation -->
+    <ul id="slide-out" class="side-nav fixed admin-side-nav dark-side-nav">
+        <!-- Logo -->
+        <div class="logo-wrapper">
+             <img src="../../../../img/avatar.png" class="img-responsive img-circle">
+            <div class="rgba-stylish-strong">
+                <p class="user white-text">Tuân Bùi
+                       <br>
+                        <i class="fa fa-circle" style="color:#50AE41;font-size:9pt;"></i> <em style="font-size:9pt;">Online</em>
+                </p>
+            </div>
+        </div>
+        <!--/. Logo -->
+
+        <!-- Side navigation links -->
+        <ul class="collapsible collapsible-accordion">
+            <li><input type="text" placeholder="Tìm kiếm ..."></li>
+            <li><a href="../../admin.html" class="waves-effect waves-light"><i class="fa fa-home"></i> Trang chủ</a></li>
+            <li><a href="../don-hang/don-hang.html" class="waves-effect waves-light"><i class="fa fa-money"></i> Đơn hàng</a></li>
+            <li><a href="tour.html" class="waves-effect waves-light  active"><i class="fa fa-tag"></i> Tour</a></li>
+            <li><a href="../danh-muc-tour/danh-muc-tour.html" class="waves-effect waves-light"><i class="fa fa-tags"></i> Danh mục tour</a></li>
+            <li><a href="../khach-hang/khach-hang.html" class="waves-effect waves-light"><i class="fa fa-users"></i> Khách hàng</a></li>
+            <li><a href="#" class="waves-effect waves-light"><i class="fa fa-volume-up"></i> Khuyến mại</a></li>
+            <hr>
+            <li><a href="../trang-noi-dung/trang-noi-dung.html" class="waves-effect waves-light"><i class="fa fa-file-text-o"></i> Trang nội dung</a></li>
+            <li><a href="../blog/blog.html" class="waves-effect waves-light"><i class="fa fa-comment"></i> Blog</a></li>
+            <li><a href="../menu/menu.html" class="waves-effect waves-light"><i class="fa fa-sitemap"></i> Menu</a></li>
+            <li><a href="../theme/theme.html" class="waves-effect waves-light"><i class="fa fa-tv"></i> Giao diện</a></li>
+            <li><a href="../file/file.html" class="waves-effect waves-light"><i class="fa fa-file-o"></i> File</a></li>
+            <hr>
+            <li><a class="collapsible-header waves-effect"><i class="fa fa-cogs"></i>Cấu hình <i class="fa fa-angle-down"></i></a>
+                <div class="collapsible-body">
+                    <ul>
+                        <li><a href="../cauhinh/cau-hinh-chung.html" class="waves-effect"><i class="fa fa-cog"></i>Cấu hình chung</a></li>
+                        <li><a href="../cauhinh/notification.html" class="waves-effect"><i class="fa fa-rss"></i>Thông báo</a></li>
+                        <li><a href="../cauhinh/thanh-toan.html" class="waves-effect"><i class="fa fa-shopping-cart"></i>Thanh toán</a></li>
+                        <li><a href="../cauhinh/tenmien.html" class="waves-effect"><i class="fa fa-globe"></i>Tên miền</a></li>
+                        <li><a href="../cauhinh/account/account.html" class="waves-effect"><i class="fa fa-user"></i>Tài khoản</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!--/. Side navigation links -->
+    </ul>
+    <!--/. Sidebar navigation -->
+
+    <!--Navbar-->
+    <nav class="double-navbar navbar navbar-fixed-top elegant-color z-depth-1" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header pull-left">
+                <!-- SideNav slide-out button -->
+                <a href="#" data-activates="slide-out" class="navbar-brand button-collapse hidden-md hidden-lg"><i class="material-icons">menu</i></a>
+                <!--/. SideNav slide-out button -->
+                <h5 class="hidden-xs hidden-sm"><i class="fa fa-tag fa-fw"> </i>Tìm kiếm Tour</h5>
+            </div>
+
+            <!-- Navbar Icons -->
+           <!--  <ul class="list-inline pull-right text-center">
+               
+            </ul> -->
+            <!--/. Navbar Icons -->
+        </div>
+    </nav>
+    <!--/.Navbar-->
+    <main>
+        <div id="main-wapper">
+            <div class="container-fluid">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <p>Tìm kiếm</p>
+                    </div>
+                    <div class="panel-body panel-donhang">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-3 col-xs-3">
+                                <select class="form-control">
+                                    <option value="1">Điều kiện lọc ...</option>
+                                    <option value="1">Hiển thị</option>
+                                    <option value="1">Loại tour</option>
+                                    <option value="1">Nhà cung cấp</option>
+                                    <option value="1">Đã được tag</option>
+                                </select>
+                            </div>
+                            <div class="col-md-9 col-sm-9 col-xs-9"><input type="text" placeholder="Tìm kiếm" id="txt-loc-search"></div>
+                        </div><br>
+                        <div class="text-center">
+                            <i class="fa fa-5x fa-tag"></i><br>
+                            <h5>Không tìm thấy sản phẩm phù hợp với điều kiện tìm kiếm</h5>
+                            <p class="sub2">Thử thay đổi điều kiện lọc hoặc từ khóa tìm kiếm</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Travel Market | Admin</title>
+    <!-- Material Design Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- CSS -->
+	<link rel="stylesheet" href="../../../../plugin/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../plugin/css/mdb.pro.css">
+    <link rel="stylesheet" href="../../../../../plugin/css/mdb.css">
+    <link rel="stylesheet" href="../../../../plugin/css/admin.css">
+    <link rel="stylesheet" href="../../../../plugin/font/font-awesome/css/font-awesome.min.css">
+    <!-- ./ CSS -->
+	<!-- Jquery -->
+    <script src="../../../../plugin/js/jquery.min.js"></script>
+    <script src="../../../../plugin/js/mdb.min.pro.js"></script>
+    <script src="../../../../plugin/js/chart.min.js"></script>
+    <script src="../../../../plugin/js/bootstrap.min.js"></script>
+    <script src="../../../../plugin/js/nicescroll.js"></script>
+    <script src="../../../../plugin/js/backTop.js"></script>
+    <script src="../../../../plugin/js/validate.js"></script>
+    <!-- ./ Jquery -->
+    <!-- Main Jquery -->
+    <script>
+        $(document).ready(function(){
+            $("html").niceScroll();
+            $('.button-collapse').sideNav();
+            $('.collapsible').collapsible();
+
+            //toast
+            $("#success_msg_1").click(function(ev)
+            {
+                ev.preventDefault();
+                var opts = {
+                    "closeButton": true,
+                    "debug": false,
+                    "positionClass": "toast-bottom-right",
+                    "onclick": null,
+                    "showDuration": "300",
+                    "hideDuration": "1000",
+                    "timeOut": "5000",
+                    "extendedTimeOut": "1000",
+                    "showEasing": "swing",
+                    "hideEasing": "linear",
+                    "showMethod": "fadeIn",
+                    "hideMethod": "fadeOut"
+                    };
+                toastr.success("Danh sách tour đã được cập nhật vào trong hệ thống !!!.", opts);
+            });
+
+            $("#success_msg_2").click(function(ev)
+            {
+                ev.preventDefault();
+                var opts = {
+                    "closeButton": true,
+                    "debug": false,
+                    "positionClass": "toast-bottom-right",
+                    "onclick": null,
+                    "showDuration": "300",
+                    "hideDuration": "1000",
+                    "timeOut": "5000",
+                    "extendedTimeOut": "1000",
+                    "showEasing": "swing",
+                    "hideEasing": "linear",
+                    "showMethod": "fadeIn",
+                    "hideMethod": "fadeOut"
+                    };
+                toastr.success("Danh sách tour đã được gửi về email admin@gmail.com.", opts);
+            });
+        });
+    </script>
+    <!-- /. Main Jquery -->
+</head>
+<body>
+    
+    <!-- Sidebar navigation -->
+    <ul id="slide-out" class="side-nav fixed admin-side-nav dark-side-nav">
+        <!-- Logo -->
+        <div class="logo-wrapper">
+            <a>
+                <img src="../../../../img/avatar.png" class="img-responsive img-circle">
+                <div class="rgba-stylish-strong">
+                    <p class="user white-text">Tuân Bùi
+                       <br>
+                        <i class="fa fa-circle" style="color:#50AE41;font-size:9pt;"></i> <em style="font-size:9pt;">Online</em>
+                    </p>
+                </div>
+            </a>
+        </div>
+        <!--/. Logo -->
+
+        <!-- Side navigation links -->
+        <ul class="collapsible collapsible-accordion">
+            <li><input type="text" placeholder="Tìm kiếm ..."></li>
+            <li><a href="../../admin.html" class="waves-effect waves-light"><i class="fa fa-home"></i> Trang chủ</a></li>
+            <li><a href="../don-hang/don-hang.html" class="waves-effect waves-light"><i class="fa fa-money"></i> Đơn hàng</a></li>
+            <li><a href="../tour/tour.html" class="waves-effect waves-light"><i class="fa fa-tag"></i> Tour</a></li>
+            <li><a href="../danh-muc-tour/danh-muc-tour.html" class="waves-effect waves-light"><i class="fa fa-tags"></i> Danh mục tour</a></li>
+            <li><a href="khach-hang.html" class="waves-effect waves-light active"><i class="fa fa-users"></i> Khách hàng</a></li>
+            <li><a href="#" class="waves-effect waves-light"><i class="fa fa-volume-up"></i> Khuyến mại</a></li>
+            <hr>
+            <li><a href="../trang-noi-dung/trang-noi-dung.html" class="waves-effect waves-light"><i class="fa fa-file-text-o"></i> Trang nội dung</a></li>
+            <li><a href="../blog/blog.html" class="waves-effect waves-light"><i class="fa fa-comment"></i> Blog</a></li>
+            <li><a href="../menu/menu.html" class="waves-effect waves-light"><i class="fa fa-sitemap"></i> Menu</a></li>
+            <li><a href="../theme/theme.html" class="waves-effect waves-light"><i class="fa fa-tv"></i> Giao diện</a></li>
+            <li><a href="../file/file.html" class="waves-effect waves-light"><i class="fa fa-file-o"></i> File</a></li>
+            <hr>
+            <li><a class="collapsible-header waves-effect"><i class="fa fa-cogs"></i>Cấu hình <i class="fa fa-angle-down"></i></a>
+                <div class="collapsible-body">
+                    <ul>
+                        <li><a href="../cauhinh/cau-hinh-chung.html" class="waves-effect"><i class="fa fa-cog"></i>Cấu hình chung</a></li>
+                        <li><a href="../cauhinh/notification.html" class="waves-effect"><i class="fa fa-rss"></i>Thông báo</a></li>
+                        <li><a href="../cauhinh/thanh-toan.html" class="waves-effect"><i class="fa fa-shopping-cart"></i>Thanh toán</a></li>
+                        <li><a href="../cauhinh/tenmien.html" class="waves-effect"><i class="fa fa-globe"></i>Tên miền</a></li>
+                        <li><a href="../cauhinh/account/account.html" class="waves-effect"><i class="fa fa-user"></i>Tài khoản</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!--/. Side navigation links -->
+    </ul>
+    <!--/. Sidebar navigation -->
+
+    <!--Navbar-->
+    <nav class="double-navbar navbar navbar-fixed-top elegant-color z-depth-1" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header pull-left">
+                <!-- SideNav slide-out button -->
+                <a href="#" data-activates="slide-out" class="navbar-brand button-collapse hidden-md hidden-lg"><i class="material-icons">menu</i></a>
+                <!--/. SideNav slide-out button -->
+                <h5 class="hidden-xs hidden-sm"><i class="fa fa-users"></i> Khách hàng</h5>
+            </div>
+
+            <!-- Navbar Icons -->
+            <ul class="list-inline pull-right text-center">
+                <li><input type="button" class="btn btn-default" value="Xuất"
+                    data-toggle="modal" data-target="#xuatKhachHang"></li>
+                <li><input type="button" class="btn btn-default" value="Nhập danh sách khách hàng"
+                    data-toggle="modal" data-target="#nhapKhachHang"></li>
+                <li><a href="them-khach-hang.html" class="btn btn-primary">Thêm mới</a>
+            </ul>
+            <!--/. Navbar Icons -->
+        </div>
+    </nav>
+    <!--/.Navbar-->
+    <!-- Modal -->
+        <!-- Xuất danh sách khách hàng-->
+              <div class="modal fade" id="xuatKhachHang" role="dialog">
+                <div class="modal-dialog">
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <p class="modal-title">Xuất danh sách khách hàng</p>
+                    </div>
+                    <div class="modal-body">
+                        <br>
+                      <input class="with-gap" type="radio" name="check" checked="checked" id="page"> 
+                      <label for="page">Trên trang này</label> <br>
+                      <input class="with-gap" type="radio" name="check" id="all"> 
+                      <label for="all">Tất cả khách hàng</label> <br>
+                      <input class="with-gap" type="radio" name="check" id="all-check">
+                      <label for="all-check">Các khách hàng được chọn</label> <br>
+                      <input class="with-gap" type="radio" name="check" id="result"> 
+                      <label for="result">Khách hàng phù hợp với kết quả hiện tại</label> <br>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
+                      <a id="success_msg_2" onClick="toastr.success('Danh sách tour đã được gửi về email admin@gmail.com.', null, opts);" class="btn btn-primary" data-dismiss="modal">Xuất danh sách khách hàng</a> 
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+        <!-- Xuất danh sách khách hàng-->
+
+        <!-- Nhập danh sách khách hàng-->
+              <div class="modal fade" id="nhapKhachHang" role="dialog">
+                <div class="modal-dialog">
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <p class="modal-title">Nhập danh sách khách hàng</p>
+                    </div>
+                    <div class="modal-body">
+                        <br>
+                        <div class="file-field input-field">
+                          <button type="button" class="btn btn-default waves-effect waves-light">
+                            <span>Chọn tệp</span>
+                            <input type="file" />
+                          </button>
+                          <p style="padding-top:20px;">Tải file mẫu nhập danh sách khách hàng <a href="https://bizweb.dktcdn.net/assets/files/products_import_template.xls?v=123">tại đây</a></p><br>
+                          <input type="checkbox" id="ghiFile">
+                          <label for="ghiFile"><b>Ghi đè thông tin khách hàng đã có</b></label>
+                        </div><br><br><br>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
+                      <a id="success_msg_1" onClick="toastr.success('Danh sách sản phẩm đã được cập nhật vào hệ thống !!!.', null, opts);" class="btn btn-primary" data-dismiss="modal">Nhập danh sách khách hàng</a> 
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+        <!-- Nhập danh sách khách hàng-->
+    <!-- Modal -->
+    <main>
+        <div id="main-wapper">
+            <div class="container-fluid">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <p>Tất cả khách hàng <a id="delete" class="btn btn-danger btn-sm pull-right">Xóa các khách hàng đã chọn</a></p>
+                    </div>
+                    <div class="panel-body panel-donhang">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <select class="form-control">
+                                    <option value="1">Điều kiện lọc ...</option>
+                                    <option value="1">Tổng chỉ tiêu</option>
+                                    <option value="1">Tổng đơn hàng</option>
+                                    <option value="1">Ngày tạo</option>
+                                    <option value="1">Ngày tiếp thị</option>
+                                    <option value="1">Trạng thái</option>
+                                    <option value="1">Được tag</option>
+                                </select>
+                            </div>
+                            <div class="col-md-9"><input type="text" placeholder="Tìm kiếm"></div>
+                        </div><br>
+                        <table class="table" id="all-item">
+                            <thead>
+                                <th>
+                                    <input type="checkbox" id="check-all">
+                                    <label for="check-all"></label>
+                                </th>
+                                <th>Họ tên</th>
+                                <th>Email</th>
+                                <th>Đơn hàng</th>
+                                <th>Tour gần nhất</th>
+                                <th>Tổng chi tiêu</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="check1">
+                                        <label for="check1"></label>
+                                    </td>
+                                    <td><a href="users/tuan-bui.html">Tuân Bùi</a></td>
+                                    <td>buiductuan811@gmail.com</td>
+                                    <td>7</td>
+                                    <td><a href="#">#1004</a></td>
+                                    <td>30.000.000₫</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="check2">
+                                        <label for="check2"></label>
+                                    </td>
+                                    <td><a href="#">Đặng Quang</a></td>
+                                    <td>dangvanquang11@gmail.com</td>
+                                    <td>1</td>
+                                    <td><a href="#">#1001</a></td>
+                                    <td>3.990.000₫</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="check3">
+                                        <label for="check3"></label>
+                                    </td>
+                                    <td><a href="#">Thúy Hạnh</a></td>
+                                    <td>hanh1211@gmail.com</td>
+                                    <td>2</td>
+                                    <td><a href="#">#1001</a></td>
+                                    <td>12.990.000₫</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="check4">
+                                        <label for="check4"></label>
+                                    </td>
+                                    <td><a href="#">Linh Nguyễn</a></td>
+                                    <td>linhxinhxinh981@gmail.com</td>
+                                    <td>4</td>
+                                    <td><a href="#">#1001</a></td>
+                                    <td>7.990.000₫</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="check5">
+                                        <label for="check5"></label>
+                                    </td>
+                                    <td><a href="#">Đại Văn</a></td>
+                                    <td>chienbinhrong989@gmail.com</td>
+                                    <td>1</td>
+                                    <td><a href="#">#1001</a></td>
+                                    <td>3.990.000₫</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="check6">
+                                        <label for="check6"></label>
+                                    </td>
+                                    <td><a href="#">Nguyễn Thị Tâm</a></td>
+                                    <td>tamnguyen9z@gmail.com</td>
+                                    <td>10</td>
+                                    <td><a href="#">#1001</a></td>
+                                    <td>67.890.000₫</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="pull-left" id="count-item">Hiển thị kết quả từ 1 - 6</p>
+                        <div class="text-center" id="none-item">
+                            <i class="fa fa-5x fa-users"></i><br>
+                            <h5>Website của bạn chưa có khách hàng nào</h5>
+                            <div class="file-field input-field">
+                              <a href="them-khach-hang.html" style="margin-left:475px" type="button" class="btn btn-primary btn-xs waves-effect waves-light">
+                                <span>Thêm khách hàng</span>
+                              </a>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Travel Market | Admin</title>
+    <!-- Material Design Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- CSS -->
+	<link rel="stylesheet" href="../../../../../plugin/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../../plugin/css/mdb.pro.css">
+    <link rel="stylesheet" href="../../../../../../plugin/css/mdb.css">
+    <link rel="stylesheet" href="../../../../../plugin/css/admin.css">
+    <link rel="stylesheet" href="../../../../../plugin/font/font-awesome/css/font-awesome.min.css">
+    <!-- ./ CSS -->
+	<!-- Jquery -->
+    <script src="../../../../../plugin/js/jquery.min.js"></script>
+    <script src="../../../../../plugin/js/mdb.min.pro.js"></script>
+    <script src="../../../../../plugin/js/chart.min.js"></script>
+    <script src="../../../../../plugin/js/bootstrap.min.js"></script>
+    <script src="../../../../../plugin/js/nicescroll.js"></script>
+    <script src="../../../../../plugin/js/backTop.js"></script>
+    <script src="../../../../../plugin/js/validate.js"></script>
+    <!-- ./ Jquery -->
+    <!-- Main Jquery -->
+    <script>
+        $(document).ready(function(){
+            $("html").niceScroll();
+            $('.button-collapse').sideNav();
+            $('.collapsible').collapsible();
+
+            //toast
+            $("#success_msg_1").click(function(ev)
+            {
+                ev.preventDefault();
+                var opts = {
+                    "closeButton": true,
+                    "debug": false,
+                    "positionClass": "toast-top-rigth",
+                    "onclick": null,
+                    "showDuration": "300",
+                    "hideDuration": "1000",
+                    "timeOut": "5000",
+                    "extendedTimeOut": "1000",
+                    "showEasing": "swing",
+                    "hideEasing": "linear",
+                    "showMethod": "fadeIn",
+                    "hideMethod": "fadeOut"
+                    };
+                toastr.success("Cập nhật cấu hình thanh toán thành công !!!.", opts);
+            });
+        });
+    </script>
+    <!-- /. Main Jquery -->
+</head>
+<body>
+    
+    <!-- Sidebar navigation -->
+    <ul id="slide-out" class="side-nav fixed admin-side-nav dark-side-nav">
+        <!-- Logo -->
+        <div class="logo-wrapper">
+            <img src="../../../../../img/beach.jpg" class="img-responsive img-circle">
+            <div class="rgba-stylish-strong">
+                <p class="user white-text">Admin
+                    <br> admin@gmail.com
+                </p>
+            </div>
+        </div>
+        <!--/. Logo -->
+
+        <!-- Side navigation links -->
+        <ul class="collapsible collapsible-accordion">
+            <li><input type="text" placeholder="Tìm kiếm ..."></li>
+            <li><a href="../../../admin.html" class="waves-effect waves-light"><i class="fa fa-home"></i> Trang chủ</a></li>
+            <li><a href="../../don-hang/don-hang.html" class="waves-effect waves-light"><i class="fa fa-money"></i> Đơn hàng</a></li>
+            <li><a href="../tour/tour.html" class="waves-effect waves-light"><i class="fa fa-tag"></i> Tour</a></li>
+            <li><a href="../../danh-muc-tour/danh-muc-tour.html" class="waves-effect waves-light"><i class="fa fa-tags"></i> Danh mục tour</a></li>
+            <li><a href="../../khach-hang/khach-hang.html" class="waves-effect waves-light"><i class="fa fa-users"></i> Khách hàng</a></li>
+            <li><a href="#" class="waves-effect waves-light"><i class="fa fa-volume-up"></i> Khuyến mại</a></li>
+            <hr>
+            <li><a href="../../trang-noi-dung/trang-noi-dung.html" class="waves-effect waves-light"><i class="fa fa-file-text-o"></i> Trang nội dung</a></li>
+            <li><a href="../../blog/blog.html" class="waves-effect waves-light"><i class="fa fa-comment"></i> Blog</a></li>
+            <li><a href="../../menu/menu.html" class="waves-effect waves-light"><i class="fa fa-sitemap"></i> Menu</a></li>
+            <li><a href="../../theme/theme.html" class="waves-effect waves-light"><i class="fa fa-tv"></i> Giao diện</a></li>
+            <li><a href="../../file/file.html" class="waves-effect waves-light"><i class="fa fa-file-o"></i> File</a></li>
+            <hr>
+            <li><a class="collapsible-header waves-effect"><i class="fa fa-cogs"></i>Cấu hình <i class="fa fa-angle-down"></i></a>
+                <div class="collapsible-body">
+                    <ul>
+                        <li><a href="../cau-hinh-chung.html" class="waves-effect"><i class="fa fa-cog"></i>Cấu hình chung</a></li>
+                        <li><a href="../notification.html" class="waves-effect"><i class="fa fa-rss"></i>Thông báo</a></li>
+                        <li><a href="../thanh-toan.html" class="waves-effect"><i class="fa fa-shopping-cart"></i>Thanh toán</a></li>
+                        <li><a href="../tenmien.html" class="waves-effect"><i class="fa fa-globe"></i>Tên miền</a></li>
+                        <li><a href="account.html" class="waves-effect"><i class="fa fa-user"></i>Tài khoản</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!--/. Side navigation links -->
+    </ul>
+    <!--/. Sidebar navigation -->
+
+    <!--Navbar-->
+    <nav class="double-navbar navbar navbar-fixed-top elegant-color z-depth-1" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header pull-left">
+                <!-- SideNav slide-out button -->
+                <a href="#" data-activates="slide-out" class="navbar-brand button-collapse hidden-md hidden-lg"><i class="material-icons">menu</i></a>
+                <!--/. SideNav slide-out button -->
+                <h5 class="hidden-xs hidden-sm"><i class="fa fa-users"></i><a href="account.html"> Tài khoản</a> / Thêm mới tài khoản</h5>
+            </div>
+
+            <!-- Navbar Icons -->
+            <ul class="list-inline pull-right text-center">
+                <li><a href="account.html" class="btn btn-default">Hủy</a></li>
+                <li><a class="btn btn-primary" id="save-account">Lưu</a></li>
+            </ul>
+            <!--/. Navbar Icons -->
+        </div>
+    </nav>
+    <!--/.Navbar-->
+    <main>
+        <div id="main-wapper">
+            <div class="container-fluid">
+
+                <!-- Thông tin tài khoản -->
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h5>Thông tin tài khoản</h5>
+                            <p class="sub2">Tất cả thông tin liên quan đến tài khoản.</p>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label class="color7"><b>Họ</b></label>
+                                            <input class="color7"  type="text" placeholder="Nhập họ">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label id="error-name-account" class="color7"><b>Tên</b></label>
+                                            <input id="account-name" class="color7" type="text" placeholder="Nhập tên">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label id="error-email-account" class="color7"><b>Email</b></label>
+                                            <input id="account-email" class="color7" type="text" placeholder="Nhập email">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label id="error-telnumber-account" class="color7"><b>Điện thoại</b></label>
+                                            <input id="telnumber-account" class="color7" type="text" placeholder="Nhập số điện thoại">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <label class="color7"><b>Trang chủ</b></label>
+                                            <input class="color7" type="text" placeholder="Nhập trang chủ">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <label class="color7"><b>Thông tin giới thiệu</b></label>
+                                            <textarea class="materialize-textarea color7" placeholder="Nhập thông tin giới thiệu"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label id="error-password-account" class="color7"><b>Mật khẩu</b></label>
+                                            <input id="account-password" class="color7" type="password" placeholder="Nhập mật khẩu">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label id="error-checkpassword-account" class="color7"><b>Xác nhận mật khẩu</b></label>
+                                            <input id="account-checkpassword" class="color7" type="password" placeholder="Xác nhận mật khẩu">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <!-- Thông tin tài khoản -->
+
+                <!-- Quyền quản trị -->
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h5>Quyền quản trị</h5>
+                            <p class="sub2">Chọn các phần mà tài khoản này có thể truy cập được.</p>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <input type="checkbox" id="check-phan-quyen-account">
+                                    <label for="check-phan-quyen-account" class="color7"><b>Giới hạn quyền truy cập</b></label>
+                                   <div class="row" id="role-account">
+                                       <div class="col-md-4">
+                                            <br><br>
+                                            <p class="sub2 color7"><b>Cửa hàng của bạn</b></p>
+                                            <input type="checkbox" id="phan-quyen-trang-chu">
+                                            <label for="phan-quyen-trang-chu">Trang chủ</label>
+                                            <br>
+                                            <input type="checkbox" id="phan-quyen-san-pham">
+                                            <label for="phan-quyen-san-pham">Sản phẩm, danh mục và kho hàng</label>
+                                            <br>
+                                            <input type="checkbox" id="phan-quyen-don-hang">
+                                            <label for="phan-quyen-don-hang">Đơn hàng</label>
+                                            <br>
+                                            <input type="checkbox" id="phan-quyen-khach-hang">
+                                            <label for="phan-quyen-khach-hang">khách hàng</label>
+                                            <br>
+                                            <input type="checkbox" id="phan-quyen-khuyen-mai">
+                                            <label for="phan-quyen-khuyen-mai">Khuyến mãi</label>
+                                            <br>
+                                       </div>
+                                       <div class="col-md-4">
+                                            <br><br>
+                                            <p class="sub2 color7"><b>Nội dung</b></p>
+                                            <input type="checkbox" id="phan-quyen-blog">
+                                            <label for="phan-quyen-blog">Blog và trang nội dung</label>
+                                            <br>
+                                            <input type="checkbox" id="phan-quyen-menu">
+                                            <label for="phan-quyen-menu">Menu</label>
+                                            <br>
+                                            <input type="checkbox" id="phan-quyen-giao-dien">
+                                            <label for="phan-quyen-giao-dien">Giao diện</label>
+                                            <br>
+                                       </div>
+                                       <div class="col-md-4">
+                                            <br><br>
+                                            <p class="sub2 color7"><b>Cấu hình</b></p>
+                                            <input type="checkbox" id="phan-quyen-application">
+                                            <label for="phan-quyen-application">Quản lý ứng dụng</label>
+                                            <br>
+                                            <input type="checkbox" id="phan-quyen-system">
+                                            <label for="phan-quyen-system">Cấu hình hệ thống</label>
+                                       </div>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <!-- Quyền quản trị -->
+            </div>
+        </div>
+    </main>
+</body>
+</html>

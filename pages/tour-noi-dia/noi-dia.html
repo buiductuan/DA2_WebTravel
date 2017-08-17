@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Travel Market</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../plugin/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../plugin/css/mdb.pro.css">
+    <link rel="stylesheet" href="../../plugin/css/mdb.css">
+    <link rel="stylesheet" href="../../plugin/css/tour.css">
+    <link rel="stylesheet" href="../../plugin/font/font-awesome/css/font-awesome.min.css">
+    <!-- ./ CSS -->
+    <!-- Jquery -->
+    <script src="../../plugin/js/jquery.min.js"></script>
+    <script src="../../plugin/js/bootstrap.min.js"></script>
+    <script src="../../plugin/js/mdb.min.pro.js"></script>
+    <script src="../../plugin/js/nicescroll.js"></script>
+    <script src="../../plugin/js/subizchat.js"></script>
+    <!-- ./ Jquery -->
+    <!-- Main Jquery -->
+    <script>
+        $(document).ready(function(){
+            $("html").niceScroll();
+
+            $(".carousel").carousel();
+
+            $(".main-nav").scroller();
+
+            $(".datepicker").pickadate({
+                selectMonths: true,
+                selectYears: 15
+            });
+        });
+    </script>
+    <!-- /. Main Jquery -->
+</head>
+<body>
+    <!-- Navigation -->
+         <nav class="navbar blue navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand waves-effect waves-light" href="../../home.html">
+                        <img src="../../img/logo.png" alt="" class="img img-responsive center-block">
+                    </a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="../../home.html">Trang chủ</a></li>
+                        <li><a href="../../home.html#dichvu">Dịch vụ</a></li>
+                        <li><a href="../../home.html#gioithieu">Giới thiệu</a></li>
+                        <li><a href="../../home.html#tournoibat">Tour nổi bật</a></li>
+                        <li><a href="../../home.html#tour">Tour</a></li>
+                        <li><a href="../../home.html#tintuc">Tin tức</a></li>
+                        <li><a href="../../home.html#doitac">Đối tác</a></li>
+                        <li><a href="../../home.html#lienhe">Liên hệ</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#modalLogin"><i class="fa fa-user"></i> Đăng nhập</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#modalSignIn"><i class="fa fa-user-plus"></i> Đăng ký</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    <!-- /.Navigation -->
+    <!-- modal login -->
+        <div class="modal fade" id="modalLogin" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <h4><i class="fa fa-user"></i> Đăng nhập</h4>
+                    </div>
+                    <div class="modal-body" style="padding:40px 50px;">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="input-field">
+                                        <input id="icon_email" type="tel" class="validate">
+                                        <label for="icon_email">Email</label>
+                                    </div>
+
+                                    <div class="input-field">
+                                        <input id="password" type="password" class="validate">
+                                        <label for="password">Mật khẩu</label>
+                                    </div>
+
+                                    <div class="text-center">
+                                        <button type="button" class="btn btn-rounded btn-primary waves-effect waves-light">Đăng nhập</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Footer-->
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-floating btn-default pull-left" data-dismiss="modal">X</button>
+                        <div class="options">
+                        <p>Bạn chưa có tài khoản <a href="#" data-toggle="modal" data-target="#modalSignIn" data-dismiss="modal">Đăng ký</a></p>
+                        <p>Quên <a href="#">mật khẩu ?</a></p>
+                        </div>
+                    </div>
+                    <!--/.Footer-->
+                </div>
+                <!-- /.Modal content-->
+            </div>
+        </div>
+    <!-- modal login -->
+
+    <!-- Modal Sign -->
+        <div class="modal fade" id="modalSignIn" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <!--Header-->
+                    <div class="modal-header text-center">
+                        <h4>Đăng nhập với </h4>
+                        <a class="btn-floating btn-large fb-bg waves-effect waves-light"><i class="fa fa-facebook"> </i></a>
+                        <a class="btn-floating btn-large tw-bg waves-effect waves-light"><i class="fa fa-twitter"> </i></a>
+                        <a class="btn-floating btn-large gplus-bg waves-effect waves-light"><i class="fa fa-google-plus"> </i></a>
+                        <a class="btn-floating btn-large li-bg waves-effect waves-light"><i class="fa fa-linkedin"> </i></a>
+                    </div>
+                    <!--/.Header-->
+
+                    <!--Body-->
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <!--Form-->
+                                <form>
+                                    <h4 class="text-center">Tạo tài khoản</h4>
+
+                                    <div class="input-field">
+                                        <input id="icon_email" type="tel" class="validate">
+                                        <label for="icon_email">Họ tên</label>
+                                    </div>
+                                    
+                                    <div class="input-field">
+                                        <input id="icon_email" type="tel" class="validate">
+                                        <label for="icon_email">Email</label>
+                                    </div>
+
+                                    <div class="input-field">
+                                        <input id="password" type="password" class="validate">
+                                        <label for="password">Mật khẩu</label>
+                                    </div>
+
+                                    <div class="input-field">
+                                        <input id="password-rep" type="password" class="validate">
+                                        <label for="password-rep">Nhập lại mật khẩu</label>
+                                    </div>
+
+                                    <div class="text-center">
+                                        <button type="button" class="btn btn-primary btn-lg waves-effect waves-light">Đăng ký</button>
+                                    </div>
+
+                                </form>
+                                <!--/.Form-->
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.Body-->
+
+                    <!--Footer-->
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-default btn-default pull-left" data-dismiss="modal">X</button>
+                        <div class="options">
+                        <p>Bạn đã có tài khoản <a href="#" data-toggle="modal" data-target="#modalLogin" data-dismiss="modal">Login</a></p>
+                        </div>
+                    </div>
+                    <!--/.Footer-->
+                </div>
+            </div>
+        </div>
+    <!--/.Modal Sign-->
+    <div class="container">
+         <section class="parallax" id="id-example1">
+            <div class="container text-center">
+               <h4>Tour nội địa</h4>
+               <p><a href="../../home.html">Trang chủ</a> / tour nội địa</p>
+               <div id="search">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <!-- nơi đến -->
+                                        <select class="form-control">
+                                            <option value="0" class="active">--Nơi đến--</option>
+                                            <option value="99">An Giang</option><option value="130">Bắc Kạn</option><option value="206">Bạc Liêu</option><option value="33">Bắc Ninh</option><option value="47">Ban Mê Thuột</option><option value="46">Bảo Lộc</option><option value="188">Bến Tre</option><option value="94">Bình Định</option><option value="194">Bình Thuận</option><option value="137">Cà Mau</option><option value="212">Cam Ranh</option><option value="56">Cần Thơ</option><option value="129">Cao Bằng</option><option value="192">Côn Đảo</option><option value="45">Đà Lạt</option><option value="42">Đà Nẵng</option><option value="187">Điện Biên</option><option value="191">Đông Bắc</option><option value="52">Đồng Nai</option><option value="199">Đồng Tháp</option><option value="135">Hà Giang</option><option value="32">Hạ Long</option><option value="29">Hà Nội</option><option value="36">Hà Tây</option><option value="59">Hà Tiên</option><option value="229">Hà Tĩnh</option><option value="30">Hải Phòng</option><option value="197">Hồ Chí Minh</option><option value="39">Huế</option><option value="193">Kiên Giang</option><option value="48">Kon Tum</option><option value="37">Lạng Sơn</option><option value="38">Lào Cai</option><option value="214">Long An</option><option value="232">Nam Định</option><option value="108">Nghệ An</option><option value="44">Nha Trang</option><option value="35">Ninh Bình</option><option value="106">Ninh Thuận</option><option value="51">Phan Thiết</option><option value="54">Phú Quốc</option><option value="34">Phú Thọ</option><option value="121">Phú Yên</option><option value="49">Pleiku</option><option value="41">Quảng Bình</option><option value="43">Quảng Nam</option><option value="198">Quảng Ngãi</option><option value="196">Quảng Ninh</option><option value="40">Quảng Trị</option><option value="141">Qui Nhơn</option><option value="58">Sóc Trăng</option><option value="134">Sơn La</option><option value="189">Tây Bắc</option><option value="221">Tây Nguyên</option><option value="203">Tây Ninh</option><option value="233">Thái Bình</option><option value="243">Thái Nguyên</option><option value="133">Thanh Hóa</option><option value="55">Tiền Giang</option><option value="213">Trà Vinh</option><option value="132">Vinh</option><option value="57">Vĩnh Long</option><option value="202">Vĩnh Phúc</option><option value="53">Vũng Tàu</option><option value="231">Yên Bái</option>
+                                            <option value="14">Ai Cập</option>
+                                            <option value="98">Ấn Độ</option>
+                                            <option value="169">Anh</option>
+                                            <option value="170">Áo</option>
+                                            <option value="127">Argentina</option>
+                                            <option value="160">Ba Lan</option>
+                                            <option value="220">Bhutan</option>
+                                            <option value="168">Bỉ</option>
+                                            <option value="157">Bồ Đào Nha</option>
+                                            <option value="126">Brazil</option>
+                                            <option value="102">Brunei</option>
+                                            <option value="5">Campuchia</option>
+                                            <option value="114">Canada</option>
+                                            <option value="128">Chile</option>
+                                            <option value="245">Croatia</option>
+                                            <option value="125">Cuba</option>
+                                            <option value="110">Đài Loan</option>
+                                            <option value="152">Đan Mạch</option>
+                                            <option value="167">Đức </option>
+                                            <option value="166">Hà Lan</option>
+                                            <option value="11">Hàn Quốc</option>
+                                            <option value="225">Hawaii</option>
+                                            <option value="13">Hoa Kỳ</option>
+                                            <option value="7">Hồng Kông &amp; Macau</option>
+                                            <option value="161">Hungary</option>
+                                            <option value="150">Hy Lạp</option>
+                                            <option value="111">Indonesia</option>
+                                            <option value="112">ISRAEL</option>
+                                            <option value="211">Jordan</option>
+                                            <option value="138">Kazakhstan</option>
+                                        </select>
+                                    <!-- nơi đến -->
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="date" class="datepicker" placeholder="Ngày bắt đầu" value="Ngày khởi hành">
+                                </div>
+                                <div class="col-md-2">
+                                    <select class="form-control">
+                                        <option>--Giá--</option>
+                                        <option>1 - 2 triệu</option>
+                                        <option>2 - 4 triệu</option>
+                                        <option>4 - 6 triệu</option>
+                                        <option>6 - 8 triệu</option>
+                                        <option>8 - 10 triệu</option>
+                                        <option>trên 10 triệu</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-2">
+                                    <select class="form-control">
+                                        <option>--Khuyến mãi--</option>
+                                        <option>Có</option>
+                                        <option>Không</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-2">
+                                    <select class="form-control">
+                                        <option>Còn chỗ</option>
+                                        <option>Hết chỗ</option>
+                                        <option>--Tất cả--</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-1">
+                                    <a href="#" class="btn btn-primary pull-left"><i class="fa fa-search"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+            </div>
+        </section>
+    </div>
+    <!-- tour quốc tế -->
+        <section id="tour">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="elegant-card">
+                            <!-- Image wrapper -->
+                            <div class="card-up view overlay hm-white-slight">
+                                <h5 class="card-label"> <span class="label rgba-black-light">4 ngày</span></h5>
+                                <a><img src="../../img/noi-dia/1.jpg" class="img-responsive"></a>
+                                <div class="mask waves-effect waves-light"> </div>
+                            </div>
+
+                            <!-- Button -->
+                            <a class="btn-floating btn-large waves-effect waves-light blue-color"><i class="fa fa-chevron-right"></i></a>
+                            <!-- Content -->
+                            <div class="card-content text-center">
+                                <p><a href="#">MỸ THO - CẦN THƠ - BẠC LIÊU - CÀ MAU</a></p>
+                                <h5>3.538.000 VND</h5>
+                                <p>MỸ THO - CẦN THƠ - BẠC LIÊU - CÀ MAU Thời gian : 4 ngày 3 đêm, Xe máy lạnh Khởi hành : Thứ 5 Về với Miền Tây Nam Bộ, du khách sẽ có dịp tìm hiểu những nét văn hóa...</p>
+                            </div>
+                            <!-- Footer -->
+                            <div class="card-footer">
+                                <ul class="list-inline">
+                                    <li><i class="fa fa-clock-o"></i>Thứ 5 hàng tuần</li>
+                                    <li><a href="#"><i class="fa fa-comments-o"></i>121</a></li>
+                                    <li><a href="#"><i class="fa fa-facebook"> </i>8</a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"> </i>0</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="elegant-card">
+                            <!-- Image wrapper -->
+                            <div class="card-up view overlay hm-white-slight">
+                                <h5 class="card-label"> <span class="label rgba-black-light">3 ngày</span></h5>
+                                <a><img src="../../img/noi-dia/2.jpg" class="img-responsive"></a>
+                                <div class="mask waves-effect waves-light"> </div>
+                            </div>
+
+                            <!-- Button -->
+                            <a class="btn-floating btn-large waves-effect waves-light blue-color"><i class="fa fa-chevron-right"></i></a>
+                            <!-- Content -->
+                            <div class="card-content text-center">
+                                <p><a href="#">MỸ THO - CẦN THƠ</a></p>
+                                <h5>1.578.000 VND</h5>
+                                <p>MỸ THO - CẦN THƠ Thời gian : 2 ngày 1 đêm, Xe máy lạnh Khởi hành : Thứ 7 Về với miền sông nước chắc chắn đem lại cho bạn cảm giác thú vị,...</p>
+                            </div>
+                            <!-- Footer -->
+                            <div class="card-footer">
+                                <ul class="list-inline">
+                                    <li><i class="fa fa-clock-o"></i>Thứ 7 hàng tuần</li>
+                                    <li><a href="#"><i class="fa fa-comments-o"></i>2352</a></li>
+                                    <li><a href="#"><i class="fa fa-facebook"> </i>26</a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"> </i>59</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="elegant-card">
+                            <!-- Image wrapper -->
+                            <div class="card-up view overlay hm-white-slight">
+                                <h5 class="card-label"> <span class="label rgba-black-light">3 ngày</span></h5>
+                                <a><img src="../../img/noi-dia/3.jpg" class="img-responsive"></a>
+                                <div class="mask waves-effect waves-light"> </div>
+                            </div>
+
+                            <!-- Button -->
+                            <a class="btn-floating btn-large waves-effect waves-light blue-color"><i class="fa fa-chevron-right"></i></a>
+                            <!-- Content -->
+                            <div class="card-content text-center">
+                                <p><a href="#">LONG XUYÊN - CHÂU ĐỐC - NÚI CẤM</a></p>
+                                <h5>1.588.000 VND</h5>
+                                <p>LONG XUYÊN - CHÂU ĐỐC - NÚI CẤM Thời gian : 2 ngày 1 đêm, Xe máy lạnh, Khởi hành : thứ 7 Về với Miền Tây Nam Bộ, du khách sẽ có dịp...</p>
+                            </div>
+                            <!-- Footer -->
+                            <div class="card-footer">
+                                <ul class="list-inline">
+                                    <li><i class="fa fa-clock-o"></i>Thứ 7 hàng tuần</li>
+                                    <li><a href="#"><i class="fa fa-comments-o"></i>111</a></li>
+                                    <li><a href="#"><i class="fa fa-facebook"> </i>231</a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"> </i>3</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="elegant-card z-depth-1 hoverable">
+                            <!-- Image wrapper -->
+                            <div class="card-up view overlay hm-white-slight">
+                                <h5 class="card-label"> <span class="label rgba-black-light">3 ngày</span></h5>
+                                <a><img src="../../img/noi-dia/4.jpg" class="img-responsive"></a>
+                                <div class="mask waves-effect waves-light"> </div>
+                            </div>
+
+                            <!-- Button -->
+                            <a class="btn-floating btn-large waves-effect waves-light blue-color"><i class="fa fa-chevron-right"></i></a>
+                            <!-- Content -->
+                            <div class="card-content text-center">
+                                <a href="#">ĐẢO NGỌC PHÚ QUỐC</a>
+                                <h5>5.400.000 VND</h5>
+                                <p>ĐẢO NGỌC PHÚ QUỐC Thời gian : 3 ngày 2 đêm, phượng tiện Máy Bay Khởi hành : Hàng ngày Phú Quốc nổi danh như một thiên đường,...</p>
+                            </div>
+                            <!-- Footer -->
+                            <div class="card-footer">
+                                <ul class="list-inline">
+                                    <li><i class="fa fa-clock-o"></i>Thứ 6 hàng tuần</li>
+                                    <li><a href="#"><i class="fa fa-comments-o"></i>12</a></li>
+                                    <li><a href="#"><i class="fa fa-facebook"> </i>21</a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"> </i>5</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="elegant-card z-depth-1 hoverable">
+                            <!-- Image wrapper -->
+                            <div class="card-up view overlay hm-white-slight">
+                                <h5 class="card-label"> <span class="label rgba-black-light">2 ngày</span></h5>
+                                <a><img src="../../img/noi-dia/5.jpg" class="img-responsive"></a>
+                                <div class="mask waves-effect waves-light"> </div>
+                            </div>
+
+                            <!-- Button -->
+                            <a class="btn-floating btn-large waves-effect waves-light blue-color"><i class="fa fa-chevron-right"></i></a>
+                            <!-- Content -->
+                            <div class="card-content text-center">
+                                <a href="#">ĐẢO NAM DU – NÀNG TIÊN GIỮA BIỂN KHƠI </a>
+                                <h5>6.090.000 VND</h5>
+                                <p>Hành Trình: SÀI GÒN – RẠCH GIÁ – ĐẢO NAM DU Phương tiện : Xe ô tô Thời gian : 2 Ngày 2 đêm Khởi hành : thứ 6 hàng tuần Đêm ngày 01,...</p>
+                            </div>
+                            <!-- Footer -->
+                            <div class="card-footer">
+                                <ul class="list-inline">
+                                    <li><i class="fa fa-clock-o"></i>Thứ 6 hàng tuần</li>
+                                    <li><a href="#"><i class="fa fa-comments-o"></i>12</a></li>
+                                    <li><a href="#"><i class="fa fa-facebook"> </i>21</a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"> </i>577</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="elegant-card z-depth-1 hoverable">
+                            <!-- Image wrapper -->
+                            <div class="card-up view overlay hm-white-slight">
+                                <h5 class="card-label"> <span class="label rgba-black-light">5 ngày</span></h5>
+                                <a><img src="../../img/noi-dia/6.jpg" class="img-responsive"></a>
+                                <div class="mask waves-effect waves-light"> </div>
+                            </div>
+
+                            <!-- Button -->
+                            <a class="btn-floating btn-large waves-effect waves-light blue-color"><i class="fa fa-chevron-right"></i></a>
+                            <!-- Content -->
+                            <div class="card-content text-center">
+                                <a href="#">HÀ NỘI - TAM CỐC - HẠ LONG - CHÙA HƯƠNG</a>
+                                <h5>9.890.000 VND</h5>
+                                <p>HÀ NỘI - TAM CỐC - HẠ LONG - CHÙA HƯƠNG Thời gian : 5 ngày 4 đêm, đi và về máy bay. Khởi hành : Thứ năm NGÀY 1: TP HỒ CHÍ MINH – HÀ NỘI (ăn 1 bữa)...</p>
+                            </div>
+                            <!-- Footer -->
+                            <div class="card-footer">
+                                <ul class="list-inline">
+                                    <li><i class="fa fa-clock-o"></i>10/10/2016</li>
+                                    <li><a href="#"><i class="fa fa-comments-o"></i>12</a></li>
+                                    <li><a href="#"><i class="fa fa-facebook"> </i>21</a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"> </i>5</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="elegant-card z-depth-1 hoverable">
+                            <!-- Image wrapper -->
+                            <div class="card-up view overlay hm-white-slight">
+                                <h5 class="card-label"> <span class="label rgba-black-light">6 ngày</span></h5>
+                                <a><img src="../../img/noi-dia/7.jpg" class="img-responsive"></a>
+                                <div class="mask waves-effect waves-light"> </div>
+                            </div>
+
+                            <!-- Button -->
+                            <a class="btn-floating btn-large waves-effect waves-light blue-color"><i class="fa fa-chevron-right"></i></a>
+                            <!-- Content -->
+                            <div class="card-content text-center">
+                                <a href="#">HÀ NỘI - YÊN TỬ - HẠ LONG - SAPA</a>
+                                <h5>10.900.000 VND</h5>
+                                <p>HÀ NỘI - YÊN TỬ - HẠ LONG - SAPA Thời gian : 6 ngày 5 đêm Khởi hành : Thứ năm NGÀY 1: TP HỒ CHÍ MINH – HÀ NỘI (ăn 1 bữa) Sáng: Hướng dẫn viên...</p>
+                            </div>
+                            <!-- Footer -->
+                            <div class="card-footer">
+                                <ul class="list-inline">
+                                    <li><i class="fa fa-clock-o"></i>10/08/2016</li>
+                                    <li><a href="#"><i class="fa fa-comments-o"></i>12</a></li>
+                                    <li><a href="#"><i class="fa fa-facebook"> </i>21</a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"> </i>5</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="elegant-card z-depth-1 hoverable">
+                            <!-- Image wrapper -->
+                            <div class="card-up view overlay hm-white-slight">
+                                <h5 class="card-label"> <span class="label rgba-black-light">4 ngày</span></h5>
+                                <a><img src="../../img/noi-dia/8.jpg" class="img-responsive"></a>
+                                <div class="mask waves-effect waves-light"> </div>
+                            </div>
+
+                            <!-- Button -->
+                            <a class="btn-floating btn-large waves-effect waves-light blue-color"><i class="fa fa-chevron-right"></i></a>
+                            <!-- Content -->
+                            <div class="card-content text-center">
+                                <a href="#">HÀ NỘI -HÀ GIANG -LŨNG CÚ-ĐÈO MÃ PÍ LÈNG</a>
+                                <h5>4.900.000 VND</h5>
+                                <p>HÀ NỘI - HÀ GIANG - LŨNG CÚ - ĐÈO MÃ PÍ LÈNG Thời gian : 4 ngày 3 đêm - Phương tiện: Máy bay + Xe Khởi hành : thứ 5 hàng tuần từ Hà Nội,...</p>
+                            </div>
+                            <!-- Footer -->
+                            <div class="card-footer">
+                                <ul class="list-inline">
+                                    <li><i class="fa fa-clock-o"></i>Thứ 5 hàng tuần</li>
+                                    <li><a href="#"><i class="fa fa-comments-o"></i>12</a></li>
+                                    <li><a href="#"><i class="fa fa-facebook"> </i>21</a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"> </i>5</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="elegant-card z-depth-1 hoverable">
+                            <!-- Image wrapper -->
+                            <div class="card-up view overlay hm-white-slight">
+                                <h5 class="card-label"> <span class="label rgba-black-light">5 ngày</span></h5>
+                                <a><img src="../../img/quoc-te/9.jpg" class="img-responsive"></a>
+                                <div class="mask waves-effect waves-light"> </div>
+                            </div>
+
+                            <!-- Button -->
+                            <a class="btn-floating btn-large waves-effect waves-light blue-color"><i class="fa fa-chevron-right"></i></a>
+                            <!-- Content -->
+                            <div class="card-content text-center">
+                                <a href="#">Đài Loan: Du ngoạn đảo Đài Loan </a>
+                                <h5>17.500.000 VND</h5>
+                                <p>Đặc điểm nổi bật: - Bảo tàng cố cung - Phố cổ thập phần - Công viên Yun - Hsien - Thủ tục hồ sơ đơn giản, giảm ngay lệ phí 50 USD cho khách hàng đăng ký trước 3 tuần,...</p>
+                            </div>
+                            <!-- Footer -->
+                            <div class="card-footer">
+                                <ul class="list-inline">
+                                    <li><i class="fa fa-clock-o"></i>10/10/2016</li>
+                                    <li><a href="#"><i class="fa fa-comments-o"></i>12</a></li>
+                                    <li><a href="#"><i class="fa fa-facebook"> </i>21</a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"> </i>5</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="elegant-card z-depth-1 hoverable">
+                            <!-- Image wrapper -->
+                            <div class="card-up view overlay hm-white-slight">
+                                <h5 class="card-label"> <span class="label rgba-black-light">15 ngày</span></h5>
+                                <a><img src="../../img/quoc-te/10.jpg" class="img-responsive"></a>
+                                <div class="mask waves-effect waves-light"> </div>
+                            </div>
+
+                            <!-- Button -->
+                            <a class="btn-floating btn-large waves-effect waves-light blue-color"><i class="fa fa-chevron-right"></i></a>
+                            <!-- Content -->
+                            <div class="card-content text-center">
+                                <a href="#">Châu Âu: Liên tuyến Ý – THỤY SỸ - PHÁP – BỈ - HÀ LAN – ĐỨC</a>
+                                <h5>82.990.000 VND</h5>
+                                <p>Đặc điểm nổi bật: - Chương trình du lịch 6 nước Châu Âu cao cấp - 15 ngày - 14 đêm,...</p>
+                            </div>
+                            <!-- Footer -->
+                            <div class="card-footer">
+                                <ul class="list-inline">
+                                    <li><i class="fa fa-clock-o"></i>10/09/2016</li>
+                                    <li><a href="#"><i class="fa fa-comments-o"></i>124</a></li>
+                                    <li><a href="#"><i class="fa fa-facebook"> </i>2167</a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"> </i>35</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="elegant-card z-depth-1 hoverable">
+                            <!-- Image wrapper -->
+                            <div class="card-up view overlay hm-white-slight">
+                                <h5 class="card-label"> <span class="label rgba-black-light">6 ngày</span></h5>
+                                <a><img src="../../img/quoc-te/11.jpg" class="img-responsive"></a>
+                                <div class="mask waves-effect waves-light"> </div>
+                            </div>
+
+                            <!-- Button -->
+                            <a class="btn-floating btn-large waves-effect waves-light blue-color"><i class="fa fa-chevron-right"></i></a>
+                            <!-- Content -->
+                            <div class="card-content text-center">
+                                <a href="#">Du lịch Nhật Bản rực rỡ sắc hoa anh đào</a>
+                                <h5>34.990.000 VND</h5>
+                                <p>Đặc điểm nổi bật: Trải nghiệm tàu điện Nhật Bản Chiêm ngưỡng Hoàng cung Nhật Bản Tham quan Núi Phú Sĩ,...</p>
+                            </div>
+                            <!-- Footer -->
+                            <div class="card-footer">
+                                <ul class="list-inline">
+                                    <li><i class="fa fa-clock-o"></i>10/10/2016</li>
+                                    <li><a href="#"><i class="fa fa-comments-o"></i>12</a></li>
+                                    <li><a href="#"><i class="fa fa-facebook"> </i>21</a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"> </i>5</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="elegant-card z-depth-1 hoverable">
+                            <!-- Image wrapper -->
+                            <div class="card-up view overlay hm-white-slight">
+                                <h5 class="card-label"> <span class="label rgba-black-light">9 ngày</span></h5>
+                                <a><img src="../../img/quoc-te/12.jpg" class="img-responsive"></a>
+                                <div class="mask waves-effect waves-light"> </div>
+                            </div>
+
+                            <!-- Button -->
+                            <a class="btn-floating btn-large waves-effect waves-light blue-color"><i class="fa fa-chevron-right"></i></a>
+                            <!-- Content -->
+                            <div class="card-content text-center">
+                                <a href="#">Nhật Bản: Mùa Hoa Anh Đào( MIGJP29032016)</a>
+                                <h5>41.960.000 VND</h5>
+                                <p>Đặc điểm nổi bật: - Chất lượng 3* tiêu chuẩn Nhật Bản - Dùng bữa trưa với món bò Kobe trứ danh - Hàng không Việt Nam Airlines,...</p>
+                            </div>
+                            <!-- Footer -->
+                            <div class="card-footer">
+                                <ul class="list-inline">
+                                    <li><i class="fa fa-clock-o"></i>10/10/2016</li>
+                                    <li><a href="#"><i class="fa fa-comments-o"></i>12</a></li>
+                                    <li><a href="#"><i class="fa fa-facebook"> </i>21</a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"> </i>5</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <!-- pagination -->
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <ul class="pagination pag-circle">
+                            <li><a href="#!"><i class="fa fa-angle-left"></i></a></li>
+                            <li class="active"><a href="tour-quoc-te.html">1</a></li>
+                            <li><a href="pages/page-1.html">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#!"><i class="fa fa-angle-right"></i></a></li>
+                        </ul>  
+                    </div>
+                </div>
+                <!-- ./pagination -->
+
+            </div>
+        </section>
+    <!-- tour quốc tế -->
+    <!-- Thống kê -->
+    <section class="parallax" id="id-example2">
+        <div class="container text-center">
+            <a class="btn-floating btn-large fb-bg waves-effect waves-light"><i class="fa fa-facebook"> </i></a>
+            <a class="btn-floating btn-large tw-bg waves-effect waves-light"><i class="fa fa-twitter"> </i></a>
+            <a class="btn-floating btn-large gplus-bg waves-effect waves-light"><i class="fa fa-google-plus"> </i></a>
+            <a class="btn-floating btn-large li-bg waves-effect waves-light"><i class="fa fa-linkedin"> </i></a>
+            <a class="btn-floating btn-large ins-bg waves-effect waves-light"><i class="fa fa-instagram"> </i></a>
+        </div>
+    </section>
+    <!-- ./ thống kê -->
+
+    <!-- footer -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p>Công ty TNHH thương mại cổ phần T - T Company of Joint Stock and Commerce <br>
+                        Trụ sở: 5, Trường Chinh, Thanh Bình, Hải Dương <br>
+                        Email: tuanAdmin@gmail.com <br>
+                        66 77 2508</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    <!-- ./ Footer -->
+</body>
+</html>

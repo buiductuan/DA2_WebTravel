@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Travel Market | Admin</title>
+    <!-- Material Design Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- CSS -->
+	<link rel="stylesheet" href="../../../../plugin/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../plugin/css/mdb.pro.css">
+    <link rel="stylesheet" href="../../../../../plugin/css/mdb.css">
+    <link rel="stylesheet" href="../../../../plugin/css/admin.css">
+    <link rel="stylesheet" href="../../../../plugin/font/font-awesome/css/font-awesome.min.css">
+    <!-- ./ CSS -->
+	<!-- Jquery -->
+    <script src="../../../../plugin/js/jquery.min.js"></script>
+    <script src="../../../../plugin/js/mdb.min.pro.js"></script>
+    <script src="../../../../plugin/js/chart.min.js"></script>
+    <script src="../../../../plugin/js/bootstrap.min.js"></script>
+    <script src="../../../../plugin/js/nicescroll.js"></script>
+    <script src="../../../../plugin/js/backTop.js"></script>
+    <script src="../../../../plugin/js/validate.js"></script>
+    <!-- ./ Jquery -->
+    <!-- Main Jquery -->
+    <script>
+        $(document).ready(function(){
+            $("html").niceScroll();
+            $('.button-collapse').sideNav();
+            $('.collapsible').collapsible();
+
+            //toast
+            $("#success_msg_1").click(function(ev)
+            {
+                ev.preventDefault();
+                var opts = {
+                    "closeButton": true,
+                    "debug": false,
+                    "positionClass": "toast-top-rigth",
+                    "onclick": null,
+                    "showDuration": "300",
+                    "hideDuration": "1000",
+                    "timeOut": "5000",
+                    "extendedTimeOut": "1000",
+                    "showEasing": "swing",
+                    "hideEasing": "linear",
+                    "showMethod": "fadeIn",
+                    "hideMethod": "fadeOut"
+                    };
+                toastr.success("Cập nhật email  thành công !!!.", opts);
+            });
+            $("#success_msg_2").click(function(ev)
+            {
+                ev.preventDefault();
+                var opts = {
+                    "closeButton": true,
+                    "debug": false,
+                    "positionClass": "toast-top-rigth",
+                    "onclick": null,
+                    "showDuration": "300",
+                    "hideDuration": "1000",
+                    "timeOut": "5000",
+                    "extendedTimeOut": "1000",
+                    "showEasing": "swing",
+                    "hideEasing": "linear",
+                    "showMethod": "fadeIn",
+                    "hideMethod": "fadeOut"
+                    };
+                toastr.success("Cập nhật email kích hoạt  thành công !!!.", opts);
+            });
+            $("#success_msg_3").click(function(ev)
+            {
+                ev.preventDefault();
+                var opts = {
+                    "closeButton": true,
+                    "debug": false,
+                    "positionClass": "toast-top-rigth",
+                    "onclick": null,
+                    "showDuration": "300",
+                    "hideDuration": "1000",
+                    "timeOut": "5000",
+                    "extendedTimeOut": "1000",
+                    "showEasing": "swing",
+                    "hideEasing": "linear",
+                    "showMethod": "fadeIn",
+                    "hideMethod": "fadeOut"
+                    };
+                toastr.success("Cập nhật email đổi mật khẩu khách hàng thành công !!!.", opts);
+            });
+            $("#success_msg_4").click(function(ev)
+            {
+                ev.preventDefault();
+                var opts = {
+                    "closeButton": true,
+                    "debug": false,
+                    "positionClass": "toast-top-rigth",
+                    "onclick": null,
+                    "showDuration": "300",
+                    "hideDuration": "1000",
+                    "timeOut": "5000",
+                    "extendedTimeOut": "1000",
+                    "showEasing": "swing",
+                    "hideEasing": "linear",
+                    "showMethod": "fadeIn",
+                    "hideMethod": "fadeOut"
+                    };
+                toastr.success("Cập nhật email đổi mật khẩu admin thành công !!!.", opts);
+            });
+        });
+    </script>
+    <!-- /. Main Jquery -->
+</head>
+<body>
+    
+    <!-- Sidebar navigation -->
+    <ul id="slide-out" class="side-nav fixed admin-side-nav dark-side-nav">
+        <!-- Logo -->
+        <div class="logo-wrapper">
+            <img src="../../../../img/beach.jpg" class="img-responsive img-circle">
+            <div class="rgba-stylish-strong">
+                <p class="user white-text">Admin
+                    <br> admin@gmail.com
+                </p>
+            </div>
+        </div>
+        <!--/. Logo -->
+
+        <!-- Side navigation links -->
+        <ul class="collapsible collapsible-accordion">
+            <li><input type="text" placeholder="Tìm kiếm ..."></li>
+            <li><a href="../../admin.html" class="waves-effect waves-light"><i class="fa fa-home"></i> Trang chủ</a></li>
+            <li><a href="../don-hang/don-hang.html" class="waves-effect waves-light"><i class="fa fa-money"></i> Đơn hàng</a></li>
+            <li><a href="../tour/tour.html" class="waves-effect waves-light"><i class="fa fa-tag"></i> Tour</a></li>
+            <li><a href="../danh-muc-tour/danh-muc-tour.html" class="waves-effect waves-light"><i class="fa fa-tags"></i> Danh mục tour</a></li>
+            <li><a href="../khach-hang/khach-hang.html" class="waves-effect waves-light"><i class="fa fa-users"></i> Khách hàng</a></li>
+            <li><a href="#" class="waves-effect waves-light"><i class="fa fa-volume-up"></i> Khuyến mại</a></li>
+            <hr>
+            <li><a href="../trang-noi-dung/trang-noi-dung.html" class="waves-effect waves-light"><i class="fa fa-file-text-o"></i> Trang nội dung</a></li>
+            <li><a href="../blog/blog.html" class="waves-effect waves-light"><i class="fa fa-comment"></i> Blog</a></li>
+            <li><a href="../menu/menu.html" class="waves-effect waves-light"><i class="fa fa-sitemap"></i> Menu</a></li>
+            <li><a href="../theme/theme.html" class="waves-effect waves-light"><i class="fa fa-tv"></i> Giao diện</a></li>
+            <li><a href="../file/file.html" class="waves-effect waves-light"><i class="fa fa-file-o"></i> File</a></li>
+            <hr>
+            <li><a class="collapsible-header waves-effect"><i class="fa fa-cogs"></i>Cấu hình <i class="fa fa-angle-down"></i></a>
+                <div class="collapsible-body">
+                    <ul>
+                        <li><a href="cau-hinh-chung.html" class="waves-effect"><i class="fa fa-cog"></i>Cấu hình chung</a></li>
+                        <li><a href="notification.html" class="waves-effect"><i class="fa fa-rss"></i>Thông báo</a></li>
+                        <li><a href="thanh-toan.html" class="waves-effect"><i class="fa fa-shopping-cart"></i>Thanh toán</a></li>
+                        <li><a href="tenmien.html" class="waves-effect"><i class="fa fa-globe"></i>Tên miền</a></li>
+                        <li><a href="account/account.html" class="waves-effect"><i class="fa fa-user"></i>Tài khoản</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!--/. Side navigation links -->
+    </ul>
+    <!--/. Sidebar navigation -->
+
+    <!--Navbar-->
+    <nav class="double-navbar navbar navbar-fixed-top elegant-color z-depth-1" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header pull-left">
+                <!-- SideNav slide-out button -->
+                <a href="#" data-activates="slide-out" class="navbar-brand button-collapse hidden-md hidden-lg"><i class="material-icons">menu</i></a>
+                <!--/. SideNav slide-out button -->
+                <h5 class="hidden-xs hidden-sm"><i class="fa fa-bell"></i> Cấu hình thông báo</h5>
+            </div>
+
+            <!-- Navbar Icons -->
+            <ul class="list-inline pull-right text-center">
+                <li><a id="success_msg_1" onClick="toastr.success('Cập nhật cấu hình hệ thống thành công !!!', null, opts);" class="btn btn-primary"> Lưu </a>
+            </ul>
+            <!--/. Navbar Icons -->
+        </div>
+    </nav>
+    <!--/.Navbar-->
+    <main>
+        <div id="main-wapper">
+            <div class="container-fluid">
+
+                <!-- Nội dung email -->
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h5>Nội dung email</h5>
+                            <p class="sub2">Những email này được gửi tự động tới bạn hoặc khách hàng. Click vào tên mẫu email để chỉnh sửa.</p>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <table class="table">
+                                        <thead>
+                                            <th>Mẫu</th>
+                                            <th>Mô tả</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><a data-toggle="modal" data-target="#modal-kich-hoat">Kích hoạt tài khoản của khách hàng từ phía admin</a></td>
+                                                <td>
+                                                    Được gửi khi tài khoản của khách hàng được kích hoạt từ phía admin
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><a data-toggle="modal" data-target="#modal-doi-matkhau">Đổi mật khẩu khách hàng</a></td>
+                                                <td>
+                                                    Được gửi khi khách hàng yêu cầu đổi mật khẩu
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><a data-toggle="modal" data-target="#modal-doi-matkhau-admin">Đổi mật khẩu khách hàng từ phía admin</a></td>
+                                                <td>
+                                                    Được gửi khi tài khoản của khách hàng được đổi mật khẩu từ phía admin
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="#">Đăng ký tài khoản khách hàng thành công</a></td>
+                                                <td>
+                                                    Được gửi đến khách hàng sau khi đăng ký tài khoản thành công trên website
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="#">Thông báo khi hủy đơn hàng trong trang quản trị</a></td>
+                                                <td>
+                                                    Được gửi khi quản trị hủy đơn hàng
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="#">Xác nhận đơn hàng</a></td>
+                                                <td>
+                                                    Được gửi khi khách hàng tạo đơn hàng
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="#">Thông báo khi đơn hàng mới</a></td>
+                                                <td>
+                                                    Được gửi đến những người đã đăng ký khi có đơn hàng mới 
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="#">Xác nhận hoàn trả</a></td>
+                                                <td>
+                                                    Được gửi sau khi thực hiện hoàn trả cho khách hàng
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <!-- Nội dung email -->
+
+                <!-- Nội dung in phiếu tour -->
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h5>Nội dung in phiếu tour</h5>
+                            <p class="sub2">Mẫu nội dung có trong phiếu tour được in ra.</p>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <table class="table">
+                                        <thead>
+                                            <th>Mẫu</th>
+                                            <th>Mô tả</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><a href="#">In phiếu tour</a></td>
+                                                <td>Mẫu nội dung khi in phiếu tour</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <!-- Nội dung in phiếu tour -->
+
+                <!-- Thông báo về tour -->
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h5>Thông báo về tour</h5>
+                            <p class="sub2">Nhận thông báo về đơn hàng qua email hoặc điện thoại.</p>
+                            <a href="#" class="btn btn-default">Thêm thông báo tour</a>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <table class="table">
+                                        <thead>
+                                            <th colspan="3">Thông báo</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Gửi mail đến admin@admin.com</td>
+                                                <td><a href="#">Gửi thông báo thử nghiệm</a></td>
+                                                <td>
+                                                    <a class="btn btn-default btn-xs"><label id="setting-notification" id="notification-on-off"></label></a>
+                                                    <button class="btn btn-default btn-xs"><i class="fa fa-trash"></i></button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <!-- Thông báo về tour -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal kích hoạt tài khoản -->
+          <!-- Modal -->
+          <div class="modal fade" id="modal-kich-hoat" role="dialog">
+            <div class="modal-dialog">
+            
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h6 class="modal-title">Chỉnh sửa mẫu email "Kích hoạt tài khoản của khách hàng từ phía admin"</h6>
+                </div>
+                <div class="modal-body">
+                  <label><b>Tiêu đề email</b></label>
+                    <input type="text" value="Thông tin đăng nhập tài khoản tại travelmarket">
+                  <label><b>Nội dung email</b></label>
+                    <textarea class="materialize-textarea"></textarea>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
+                   <button id="success_msg_2" onClick="toastr.success('Danh sách sản phẩm đã được cập nhật vào hệ thống !!!.', null, opts);" type="button" class="btn btn-primary" data-dismiss="modal">Lưu</button>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+    <!-- Modal kích hoạt tài khoản -->
+
+    <!-- Modal đổi mật khẩu khách hàng -->
+          <!-- Modal -->
+          <div class="modal fade" id="modal-doi-matkhau" role="dialog">
+            <div class="modal-dialog">
+            
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h6 class="modal-title">Chỉnh sửa mẫu email "Đổi mật khẩu khách hàng""</h6>
+                </div>
+                <div class="modal-body">
+                  <label><b>Tiêu đề email</b></label>
+                    <input type="text" value="Đổi mật khẩu khách hàng">
+                  <label><b>Nội dung email</b></label>
+                    <textarea class="materialize-textarea"></textarea>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
+                   <button id="success_msg_3" onClick="toastr.success('Danh sách sản phẩm đã được cập nhật vào hệ thống !!!.', null, opts);" type="button" class="btn btn-primary" data-dismiss="modal">Lưu</button>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+    <!-- Modal đổi mật khẩu khách hàng -->
+
+    <!-- Modal đổi mật khẩu admin -->
+          <!-- Modal -->
+          <div class="modal fade" id="modal-doi-matkhau-admin" role="dialog">
+            <div class="modal-dialog">
+            
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h6 class="modal-title">Chỉnh sửa mẫu email "Đổi mật khẩu khách hàng từ phía admin"</h6>
+                </div>
+                <div class="modal-body">
+                  <label><b>Tiêu đề email</b></label>
+                    <input type="text" value="Đổi mật khẩu admin">
+                  <label><b>Nội dung email</b></label>
+                    <textarea class="materialize-textarea"></textarea>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
+                   <button id="success_msg_3" onClick="toastr.success('Danh sách sản phẩm đã được cập nhật vào hệ thống !!!.', null, opts);" type="button" class="btn btn-primary" data-dismiss="modal">Lưu</button>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+    <!-- Modal đổi mật khẩu admin -->
+</body>
+</html>

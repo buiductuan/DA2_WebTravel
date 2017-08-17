@@ -1,0 +1,111 @@
+#id-example2{
+	padding: 90px 0px;
+	background-image:url("../../img/canada-lake-bg.jpg");
+}
+#id-example1{
+	background-image:url("../../img/beach.jpg");
+}
+.navbar-fixed-top{
+	padding: 0;
+}
+
+.navbar-fixed-top .navbar-nav > li{
+	font-size: 10.5pt;
+}
+#id-example1 h4{
+	text-transform: uppercase;
+	padding: 40px 0px;
+	color: #FFF;
+	font-weight: 500
+}
+#id-example1 p,
+#id-example1 a{
+	color: #FFF;
+	text-transform: uppercase;
+	font-weight: 500
+}
+.parallax{
+	padding-bottom: 0;
+}
+#id-example1 a:hover{
+	color: #F76312
+}
+.top-nav-collapse .navbar-nav > li > a{
+		font-size: 10.5pt;
+}
+#search .col-md-12{
+	padding: 30px 30px;
+	background-color: rgba(8,8,8,0.5);
+}
+#search .form-control{
+	border: 1px solid#FFF;
+	font-weight: 400;
+	margin-bottom: 10px;
+}
+#search input[type="date"]{
+	border: 1px solid #FFF;
+	color: #FFF;
+	height: 34px;
+	padding-left: 10px;
+	margin-bottom: 10px;
+}
+#search{
+	width: 97.3%;
+	margin-top: 20px;
+}
+#search a{
+	margin-top: -5px;
+}
+#tour{
+	padding:90px 0px;
+}
+#tour .card{
+	box-shadow: none;
+	border: 1px solid#DDD;
+}
+#tour .card p{
+		padding: 0px 10px;
+}
+#tour .card-content h5{
+	font-weight: 600;
+	color:#EC6464;	
+}
+#tour .elegant-card{
+	border: 1px solid#DDD
+}
+#tour .btn-floating i{
+	background-color: #49ACF1
+}
+footer{
+	padding: 50px 0px;
+}
+
+#id-example2 .btn-floating.btn-large {
+	background-color: rgba(8,8,8,0);
+	border: 2px solid#FFF;
+}
+#id-example2 .btn-floating.btn-large :hover{
+	background-color: #5FA6DC
+}
+
+/*news*/
+#news-content{
+	padding: 50px 0px;
+}
+
+.sub2{
+	font-size: 12pt;
+	font-weight: 370
+}
+.bold{
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+#search-result{
+	padding: 150px 0px;
+}
+
+.modal label{
+	color: #EE3A3A;
+}

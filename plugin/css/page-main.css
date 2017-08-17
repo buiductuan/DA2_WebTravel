@@ -1,0 +1,43 @@
+#main{
+	padding: 90px 0px;
+}
+
+#carousel1 .carousel-indicators li{
+	height: 12px;
+	width: 12px;
+}
+#main h5{
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+.underline{
+	width: 90%;
+	border: 2px solid #E94343;
+}
+#main i {
+	font-size: 60pt;
+	padding:20px 0px;
+}
+
+#main .card-panel{
+	border: 1px solid#DDD;
+	box-shadow: none;
+}
+#main .nav-tabs>li>a{
+	color: #333
+}
+#main .nav-tabs>li>a:focus{
+	color: #F32345
+}
+#chuongtrinh{
+	padding: 30px 0px;
+}
+#chuongtrinh .card-panel #giatour h5{
+	color: #F14343;
+	font-weight: 600;
+}
+.uppercase{
+	color: #3EA8E5;
+	text-transform: uppercase;
+}

@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Travel Market</title>
+	<!-- CSS -->
+	<link rel="stylesheet" href="../../../plugin/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../plugin/css/mdb.pro.css">
+    <link rel="stylesheet" href="../../../plugin/css/mdb.css">
+    <link rel="stylesheet" href="../../../plugin/css/tour.css">
+    <link rel="stylesheet" href="../../../plugin/font/font-awesome/css/font-awesome.min.css">
+     <!-- Material Design Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- ./ CSS -->
+	<!-- Jquery -->
+    <script src="../../../plugin/js/jquery.min.js"></script>
+    <script src="../../../plugin/js/bootstrap.min.js"></script>
+    <script src="../../../plugin/js/mdb.min.pro.js"></script>
+    <script src="../../../plugin/js/nicescroll.js"></script>
+    <script src="../../../plugin/js/subizchat.js"></script>
+    <script src="../../../plugin/js/validate.js"></script>
+    <!-- ./ Jquery -->
+    <!-- Main Jquery -->
+    <script>
+        $(document).ready(function(){
+            $("html").niceScroll();
+
+            $(".carousel").carousel();
+
+            $(".main-nav").scroller();
+
+            $(".datepicker").pickadate({
+                selectMonths: true,
+                selectYears: 15
+            });
+        });
+    </script>
+    <!-- /. Main Jquery -->
+</head>
+<body>
+    <!-- Navigation -->
+         <nav class="navbar blue navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand waves-effect waves-light" href="../../../home.html">
+                        <img src="../../../img/logo.png" alt="" class="img img-responsive center-block">
+                    </a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="../../../home.html">Trang chủ</a></li>
+                        <li><a href="../../../home.html#dichvu">Dịch vụ</a></li>
+                        <li><a href="../../../home.html#gioithieu">Giới thiệu</a></li>
+                        <li><a href="../../../home.html#tournoibat">Tour nổi bật</a></li>
+                        <li><a href="../../../home.html#tour">Tour</a></li>
+                        <li><a href="../../../home.html#tintuc">Tin tức</a></li>
+                        <li><a href="../../../home.html#doitac">Đối tác</a></li>
+                        <li><a href="../../../home.html#lienhe">Liên hệ</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#modalLogin"><i class="fa fa-user"></i> Đăng nhập</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#modalSignIn"><i class="fa fa-user-plus"></i> Đăng ký</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    <!-- /.Navigation -->
+    <!-- modal login -->
+        <div class="modal fade" id="modalLogin" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <h4><i class="fa fa-user"></i> Đăng nhập</h4>
+                    </div>
+                    <div class="modal-body" style="padding:40px 50px;">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="input-field">
+                                        <input id="icon_email" type="tel" class="validate">
+                                        <label for="icon_email">Email</label>
+                                    </div>
+
+                                    <div class="input-field">
+                                        <input id="password" type="password" class="validate">
+                                        <label for="password">Mật khẩu</label>
+                                    </div>
+
+                                    <div class="text-center">
+                                        <button type="button" class="btn btn-rounded btn-primary waves-effect waves-light">Đăng nhập</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Footer-->
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-floating btn-default pull-left" data-dismiss="modal">X</button>
+                        <div class="options">
+                        <p>Bạn chưa có tài khoản <a href="#" data-toggle="modal" data-target="#modalSignIn" data-dismiss="modal">Đăng ký</a></p>
+                        <p>Quên <a href="#">mật khẩu ?</a></p>
+                        </div>
+                    </div>
+                    <!--/.Footer-->
+                </div>
+                <!-- /.Modal content-->
+            </div>
+        </div>
+    <!-- modal login -->
+
+    <!-- Modal Sign -->
+        <div class="modal fade" id="modalSignIn" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <!--Header-->
+                    <div class="modal-header text-center">
+                        <h4>Đăng nhập với </h4>
+                        <a class="btn-floating btn-large fb-bg waves-effect waves-light"><i class="fa fa-facebook"> </i></a>
+                        <a class="btn-floating btn-large tw-bg waves-effect waves-light"><i class="fa fa-twitter"> </i></a>
+                        <a class="btn-floating btn-large gplus-bg waves-effect waves-light"><i class="fa fa-google-plus"> </i></a>
+                        <a class="btn-floating btn-large li-bg waves-effect waves-light"><i class="fa fa-linkedin"> </i></a>
+                    </div>
+                    <!--/.Header-->
+
+                    <!--Body-->
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <!--Form-->
+                                <form>
+                                    <h4 class="text-center">Tạo tài khoản</h4>
+
+                                    <div class="input-field">
+                                        <input id="icon_email" type="tel" class="validate">
+                                        <label for="icon_email">Họ tên</label>
+                                    </div>
+                                    
+                                    <div class="input-field">
+                                        <input id="icon_email" type="tel" class="validate">
+                                        <label for="icon_email">Email</label>
+                                    </div>
+
+                                    <div class="input-field">
+                                        <input id="password" type="password" class="validate">
+                                        <label for="password">Mật khẩu</label>
+                                    </div>
+
+                                    <div class="input-field">
+                                        <input id="password-rep" type="password" class="validate">
+                                        <label for="password-rep">Nhập lại mật khẩu</label>
+                                    </div>
+
+                                    <div class="text-center">
+                                        <button type="button" class="btn btn-primary btn-lg waves-effect waves-light">Đăng ký</button>
+                                    </div>
+
+                                </form>
+                                <!--/.Form-->
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.Body-->
+
+                    <!--Footer-->
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-default btn-default pull-left" data-dismiss="modal">X</button>
+                        <div class="options">
+                        <p>Bạn đã có tài khoản <a href="#" data-toggle="modal" data-target="#modalLogin" data-dismiss="modal">Login</a></p>
+                        </div>
+                    </div>
+                    <!--/.Footer-->
+                </div>
+            </div>
+        </div>
+    <!--/.Modal Sign-->
+    <div class="container">
+         <section class="parallax" id="id-example1">
+            <div class="container text-center">
+               <h4>Thiên đường chỉ là bản sao của Mauritius</h4>
+               <p><a href="../../../home.html">Trang chủ</a> / Tin tức / Thiên đường chỉ là bản sao của Mauritius</p>
+            </div>
+        </section>
+    </div>
+    
+    <section id="news-content">
+        <div class="container">
+            <p><a href="../../../home.html">Trang chủ</a> / Tin tức / Thiên đường chỉ là bản sao của Mauritius</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="../../../img/news/2.jpg" alt="" class="img-responsive center-block">
+                </div>
+                <div class="col-md-8">
+                    <p class="sub2"><em>15/04/2016</em></p>
+                    <p class="sub2">Khi cái nóng oi bức của mùa hè bắt đầu thì cũng là lúc mọi người lên kế hoạch cho kỳ nghỉ “trốn nóng” cùng gia đình. Và không lý do gì bạn lại bỏ qua một viên ngọc xanh tuyệt đẹp Maldives. Hành trình hứa hẹn sẽ đem đến cho bạn những cảm nhận về thiên đường biển xanh, cát trắng có thật trên trái đất.</p>
+                </div>
+            </div>
+            <br>
+            <img src="../../../img/news/news1/1.jpg" alt="" class="img-responsive center-block">
+            <br>
+            <p class="sub2">Maldives là quốc đảo được tạo từ 1192 đảo san hô nhỏ nằm gộp thành các cụm đảo san hô vòng. Tuy được xem là quốc gia nhỏ nhất châu Á, nhưng Maldives khiến cả thế giới phải kinh ngạc bởi sở hữu những cảnh đẹp tuyệt vời mà thiên nhiên đã ưu ái ban tặng. Đến với Maldives bạn sẽ tận hưởng một “thiên đường nhiệt đới”. Bãi cát trắng phau trải dài bất tận, biển êm lặng sóng, những căn nhà gỗ được thiết kế sáng tạo, gần gũi với thiên nhiên, nơi bạn chỉ cần mở cửa phòng là đã có thể tận mắt ngắm các loài cá sặc sỡ bơi lội, và thả mình trong làn nước biển trong xanh, mát lạnh. Đây là điểm đến tuyệt vời cho những cặp đôi đang yêu nhau.</p>
+            <br>
+            <img src="../../../img/news/news1/2.jpg" alt="" class="img-responsive center-block">
+            <br>
+            <p class="sub2">Một trải nghiệm khác mà bạn không thể bỏ lỡ khi đến đảo Maldives xinh đẹp là hoạt động lặn biển bằng ống thở (snorkelling). Khó có thể tin nổi là bạn có thể được bơi lội trong làn nước trong suốt như pha lê, phía dưới là những rặng san hô nhiều màu sắc và hình dạng khác nhau. Và còn gì tuyệt hơn khi chính mắt bạn được nhìn, chính tay bạn được chạm vào các sinh vật và động vật biển dưới lòng đại dương. Ngoài ra, bạn có thể đi dạo biển đêm, hoặc viếng thăm những ngôi làng lân cận để tìm hiểu về cuộc sống thường ngày của ngư dân, để thấy rằng con người nơi đây hiền hòa và thân thiện, họ yêu biển như một phần cuộc sống của họ.</p>
+            <br>
+            <img src="../../../img/news/news1/3.jpg" alt="" class="img-responsive center-block">
+            <br>
+            <p class="sub2">Không tiếng còi xe inh ỏi, không khói bụi, chỉ một bầu không khí trong lành, chỉ một cảnh sắc thanh bình, đó chính là cách mà Maldives đem đến cho bạn một kỳ nghỉ tận hưởng mùa hè trọn vẹn nhất.</p>
+            <!-- các tin tức liên quan -->
+            <hr>
+            <h5 class="text-center bold">Các tin tức liên quan</h5>
+            <hr>
+            <!-- Carousel -->
+            <div id="carousel-multi-item" class="carousel slide multiitem-car">
+                <div class="text-center">
+                    <a class="btn-floating btn-small waves-effect waves-light grey darken-4" href="#carousel-multi-item" role="button" data-slide="prev"><i class="material-icons">keyboard_arrow_left</i></a>
+                    <a class="btn-floating btn-small waves-effect waves-light grey darken-4" href="#carousel-multi-item" role="button" data-slide="next"><i class="material-icons">keyboard_arrow_right</i></a>
+                </div>
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-multi-item" data-slide-to="0" class="active">
+                    </li>
+                    <li data-target="#carousel-multi-item" data-slide-to="1"></li>
+                    <li data-target="#carousel-multi-item" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+
+
+                    <!-- First slide -->
+                    <div class="item active">
+
+                        <!-- Row -->
+                        <div class="row text-center">
+                            <!-- Card -->
+                            <div class="col-sm-4 item-card">
+                                <!--Image Card-->
+                                <div class="card hoverable">
+                                    <div class="card-image">
+                                        <div class="view overlay hm-white-slight z-depth-1">
+                                            <img src="../../../img/news/5.jpg" class="img-responsive" alt="">
+                                            <a href="#">
+                                                <div class="mask waves-effect"></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="card-content">
+                                        <h5>Lên Đông Tây Bắc “trốn nóng” mùa hè 2016</h5>
+                                        <p>Đông Tây Bắc được ví là một trong những thiên đường nghỉ mát lý tưởng nhất Việt Nam</p>
+                                    </div>
+                                    <!--Buttons-->
+                                    <div class="card-btn text-center">
+                                        <a href="new2.html" class="btn btn-primary btn-md waves-effect waves-light">Đọc thêm</a>
+                                    </div>
+                                    <!--/.Buttons-->
+                                </div>
+                                <!--Image Card-->
+                            </div>
+                            <!-- /.Card -->
+
+                            <!-- Card -->
+                            <div class="col-sm-4 item-card  hidden-xs">
+                                <!--Image Card-->
+                                <div class="card hoverable">
+                                    <div class="card-image">
+                                        <div class="view overlay hm-white-slight z-depth-1">
+                                            <img src="../../../img/news/6.jpg" class="img-responsive" alt="">
+                                            <a href="#">
+                                                <div class="mask waves-effect"></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="card-content">
+                                        <h5>Cuba - Không chỉ là giấc mơ<br><br></h5>
+                                        <p>Đất nước vùng Caribbean xinh đẹp ấy với những người anh hùng đi vào huyền thoại</p>
+                                    </div>
+                                    <!--Buttons-->
+                                    <div class="card-btn text-center">
+                                        <a class="btn btn-primary btn-md waves-effect waves-light">Đọc thêm</a>
+                                    </div>
+                                    <!--/.Buttons-->
+                                </div>
+                                <!--Image Card-->
+                            </div>
+                            <!-- /.Card -->
+
+                            <!-- Card -->
+                            <div class="col-sm-4 item-card  hidden-xs">
+                                <!--Image Card-->
+                                <div class="card hoverable">
+                                    <div class="card-image">
+                                        <div class="view overlay hm-white-slight z-depth-1">
+                                            <img src="../../../img/news/7.jpg" class="img-responsive" alt="">
+                                            <a href="#">
+                                                <div class="mask waves-effect"></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="card-content">
+                                        <h5>Du lịch Phú Quốc bay thẳng từ Hải Phòng</h5>
+                                        <p>125 du khách của Travelmarket Hải Phòng sẽ là những khách hàng đầu tiên trải nghiệm tour Phú Quốc</p>
+                                    </div>
+                                    <!--Buttons-->
+                                    <div class="card-btn text-center">
+                                        <a href="new2.html" class="btn btn-primary btn-md waves-effect waves-light">Đọc thêm</a>
+                                    </div>
+                                    <!--/.Buttons-->
+                                </div>
+                                <!--Image Card-->
+                            </div>
+                            <!-- /.Card -->
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.item -->
+
+                    <!-- Second slide -->
+                    <div class="item">
+                        <!-- Row -->
+                        <div class="row text-center">
+                            <!-- Card -->
+                            <div class="col-sm-4 item-card">
+                                <!--Image Card-->
+                                <div class="card hoverable">
+                                    <div class="card-image">
+                                        <div class="view overlay hm-white-slight z-depth-1">
+                                            <img src="../../../img/news/8.jpg" class="img-responsive" alt="">
+                                            <a href="#">
+                                                <div class="mask waves-effect"></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="card-content">
+                                        <h5>Du thuyền 5 sao khám phá cung đường Đông Bắc Á</h5>
+                                        <p>Travelmarket trở thành đơn vị tiên phong trong việc xây dựng hàng loạt chuyến hải trình bằng du thuyền 5 sao đẳng cấp thế giới</p>
+                                    </div>
+                                    <!--Buttons-->
+                                    <div class="card-btn text-center">
+                                        <a href="#" class="btn btn-primary btn-md waves-effect waves-light">Đọc thêm</a>
+                                    </div>
+                                    <!--/.Buttons-->
+                                </div>
+                                <!--Image Card-->
+                            </div>
+                            <!-- /.Card -->
+
+                            <!-- Card -->
+                            <div class="col-sm-4 item-card hidden-xs">
+                                <!--Image Card-->
+                                <div class="card hoverable">
+                                    <div class="card-image">
+                                        <div class="view overlay hm-white-slight z-depth-1">
+                                            <img src="../../../img/news/9.jpg" class="img-responsive" alt="">
+                                            <a href="#">
+                                                <div class="mask waves-effect"></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="card-content">
+                                        <h5>Trải nghiệm mùa đông xứ Kangaroo</h5>
+                                        <p>Cứ mỗi độ tháng 6 về, khi cái nóng oi bức của mùa hè miền nhiệt đới thì tại xứ sở chuột túi, những bông tuyết đầu mùa lại bắt đầu rơi</p>
+                                    </div>
+                                    <!--Buttons-->
+                                    <div class="card-btn text-center">
+                                        <a href="#" class="btn btn-primary btn-md waves-effect waves-light">Đọc thêm</a>
+                                    </div>
+                                    <!--/.Buttons-->
+                                </div>
+                                <!--Image Card-->
+                            </div>
+                            <!-- /.Card -->
+
+                            <!-- Card -->
+                            <div class="col-sm-4 item-card hidden-xs">
+                                <!--Image Card-->
+                                <div class="card hoverable">
+                                    <div class="card-image">
+                                        <div class="view overlay hm-white-slight z-depth-1">
+                                            <img src="../../../img/news/10.jpg" class="img-responsive" alt="">
+                                            <a href="#">
+                                                <div class="mask waves-effect"></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="card-content">
+                                        <h5>Hạ Long - Thiên đường nghỉ dưỡng</h5>
+                                        <p>Ôm ấp trong lòng những kỳ quan đá, hang động đẹp đến ngỡ ngàng, Hạ Long khiến cho ai chiêm ngưỡng đều bị mê hoặc</p>
+                                    </div>
+                                    <!--Buttons-->
+                                    <div class="card-btn text-center">
+                                        <a href="#" class="btn btn-primary btn-md waves-effect waves-light">Đọc thêm</a>
+                                    </div>
+                                    <!--/.Buttons-->
+                                </div>
+                                <!--Image Card-->
+                            </div>
+                            <!-- /.Card -->
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.item -->
+
+                    <!-- Third slide -->
+                    <div class="item">
+                        <!-- Row -->
+                        <div class="row text-center">
+                            <!-- Card -->
+                            <div class="col-sm-4 item-card">
+                                <!--Image Card-->
+                                <div class="card hoverable">
+                                    <div class="card-image">
+                                        <div class="view overlay hm-white-slight z-depth-1">
+                                            <img src="../../../img/news/11.jpg" class="img-responsive" alt="">
+                                            <a href="#">
+                                                <div class="mask waves-effect"></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="card-content">
+                                        <h5>Những mùa hoa lavender tím biếc</h5>
+                                        <p>Những ai yêu thích hoa Lavender (oải hương) sẽ nghĩ ngay đến những cánh đồng bạt ngàn sắc tím ở Provence - nước Pháp</p>
+                                    </div>
+                                    <!--Buttons-->
+                                    <div class="card-btn text-center">
+                                        <a href="#" class="btn btn-primary btn-md waves-effect waves-light">Đọc thêm</a>
+                                    </div>
+                                    <!--/.Buttons-->
+                                </div>
+                                <!--Image Card-->
+                            </div>
+                            <!-- /.Card -->
+
+                            <!-- Card -->
+                            <div class="col-sm-4 item-card hidden-xs">
+                                <!--Image Card-->
+                                <div class="card hoverable">
+                                    <div class="card-image">
+                                        <div class="view overlay hm-white-slight z-depth-1">
+                                            <img src="../../../img/news/12.jpg" class="img-responsive" alt="">
+                                            <a href="#">
+                                                <div class="mask waves-effect"></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="card-content">
+                                        <h5>Món ngon Hà Nội <br><br><br></h5>
+                                        <p>Mời bạn thưởng thức một số món ngon không thể bỏ qua dưới đây khi đến thủ đô Hà Nội </p>
+                                    </div>
+                                    <!--Buttons-->
+                                    <div class="card-btn text-center">
+                                        <a href="#" class="btn btn-primary btn-md waves-effect waves-light">Đọc thêm</a>
+                                    </div>
+                                    <!--/.Buttons-->
+                                </div>
+                                <!--Image Card-->
+                            </div>
+                            <!-- /.Card -->
+
+                            <!-- Card -->
+                            <div class="col-sm-4 item-card hidden-xs">
+                                <!--Image Card-->
+                                <div class="card hoverable">
+                                    <div class="card-image">
+                                        <div class="view overlay hm-white-slight z-depth-1">
+                                            <img src="../../../img/news/13.jpg" class="img-responsive" alt="">
+                                            <a href="#">
+                                                <div class="mask waves-effect"></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="card-content">
+                                        <h5>9 điểm ngắm cảnh mùa thu tuyệt đẹp trên thế giới</h5>
+                                        <p>Trời đất vào thu ở cố đô Nara Nhật Bản hay thung lũng Loire của Pháp ngập tràn màu sắc rực rỡ quyến rũ không thể cưỡng với bất kỳ du khách nào.</p>
+                                    </div>
+                                    <!--Buttons-->
+                                    <div class="card-btn text-center">
+                                        <a href="#" class="btn btn-primary btn-md waves-effect waves-light">Đọc thêm</a>
+                                    </div>
+                                    <!--/.Buttons-->
+                                </div>
+                                <!--Image Card-->
+                            </div>
+                            <!-- /.Card -->
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.item -->
+
+                </div>
+                <!-- /.carousel-inner -->
+            </div>
+            <!-- /.carousel -->
+        <!-- các tin tức liên quan -->
+        </div>        
+    </section>
+    
+    <!-- Nhận xét -->
+    <div class="container">
+        <!-- Bình luận -->
+        <hr>
+        <section id="binhluan">
+            <h5><strong>Nhận xét</strong></h5>
+            <label style="color:#3EC367" id="note-success-binhluan"></label>
+            <div class="row">
+                <div class="col-md-6">
+                    <label style="color:#ED4343" id="error-hoten-binhluan"></label>
+                    <input id="hoten-binhluan" type="text" placeholder="Họ và tên">
+                </div>
+                <div class="col-md-6">
+                    <label style="color:#ED4343" id="error-email-binhluan"></label>
+                    <input id="email-binhluan" type="text" placeholder="Email">
+                </div>
+            </div>
+            <label style="color:#ED4343" id="error-noidung-binhluan"></label>
+            <textarea id="noidung-binhluan" class="materialize-textarea" placeholder="Nội dung bình luận"></textarea>
+            <button id="gui-binhluan" class="btn btn-success pull-right">Gửi bình luận</button>
+            <br><br><br><br>
+        </section>
+        <hr>
+        <!-- Bình luận -->
+        <!-- Nội dung bình luận -->
+        <section id="noidung-binhluan">
+            <h5>Nhận xét (12) :</h5>
+            <table class="table" id="NoiDung-BinhLuan">
+                <tbody>
+                    <tr>
+                        <td><i class="fa fa-user"></i></td>
+                        <td><strong>Tuân</strong></td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A perferendis ipsum incidunt enim non quos dolores itaque animi doloremque dolore, facilis, impedit eius blanditiis unde praesentium fugit debitis sequi fuga.</td>
+                        <td>12/11/2016</td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa fa-user"></i></td>
+                        <td><strong>Songoku</strong></td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A perferendis ipsum incidunt enim non quos dolores itaque animi doloremque dolore, facilis, impedit eius blanditiis unde praesentium fugit debitis sequi fuga.</td>
+                        <td>12/11/2016</td>
+                    </tr>
+                </tbody>
+            </table>
+            <a class="pull-right">Xem thêm bình luận</a>
+            <br><br>
+        </section>
+        <!-- Nội dung bình luận -->
+    </div>
+                
+    <!-- Liên kết -->
+    <section class="parallax" id="id-example2">
+        <div class="container text-center">
+            <a class="btn-floating btn-large fb-bg waves-effect waves-light"><i class="fa fa-facebook"> </i></a>
+            <a class="btn-floating btn-large tw-bg waves-effect waves-light"><i class="fa fa-twitter"> </i></a>
+            <a class="btn-floating btn-large gplus-bg waves-effect waves-light"><i class="fa fa-google-plus"> </i></a>
+            <a class="btn-floating btn-large li-bg waves-effect waves-light"><i class="fa fa-linkedin"> </i></a>
+            <a class="btn-floating btn-large ins-bg waves-effect waves-light"><i class="fa fa-instagram"> </i></a>
+        </div>
+    </section>
+    <!-- ./ Liên kết -->
+
+    <!-- footer -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p>Công ty TNHH thương mại cổ phần T - T Company of Joint Stock and Commerce <br>
+                        Trụ sở: 5, Trường Chinh, Thanh Bình, Hải Dương <br>
+                        Email: tuanAdmin@gmail.com <br>
+                        66 77 2508</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    <!-- ./ Footer -->
+</body>
+</html>

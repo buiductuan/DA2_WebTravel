@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Travel Market | Admin</title>
+    <!-- Material Design Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- CSS -->
+	<link rel="stylesheet" href="../../../../plugin/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../plugin/css/mdb.pro.css">
+    <link rel="stylesheet" href="../../../../../plugin/css/mdb.css">
+    <link rel="stylesheet" href="../../../../plugin/css/admin.css">
+    <link rel="stylesheet" href="../../../../plugin/font/font-awesome/css/font-awesome.min.css">
+    <!-- ./ CSS -->
+	<!-- Jquery -->
+    <script src="../../../../plugin/js/jquery.min.js"></script>
+    <script src="../../../../plugin/js/mdb.min.pro.js"></script>
+    <script src="../../../../plugin/js/chart.min.js"></script>
+    <script src="../../../../plugin/js/bootstrap.min.js"></script>
+    <script src="../../../../plugin/js/nicescroll.js"></script>
+    <script src="../../../../plugin/js/backTop.js"></script>
+    <script src="../../../../plugin/js/validate.js"></script>
+    <!-- ./ Jquery -->
+    <!-- Main Jquery -->
+    <script>
+        $(document).ready(function(){
+            $("html").niceScroll();
+            $('.button-collapse').sideNav();
+            $('.collapsible').collapsible();
+            // tooltip
+            $('[data-toggle="tooltip"]').tooltip({animation: true, delay: {show: 300, hide: 300}});
+            //toast
+            $("#success_msg_1").click(function(ev)
+            {
+                ev.preventDefault();
+                var opts = {
+                    "closeButton": true,
+                    "debug": false,
+                    "positionClass": "toast-bottom-right",
+                    "onclick": null,
+                    "showDuration": "300",
+                    "hideDuration": "1000",
+                    "timeOut": "5000",
+                    "extendedTimeOut": "1000",
+                    "showEasing": "swing",
+                    "hideEasing": "linear",
+                    "showMethod": "fadeIn",
+                    "hideMethod": "fadeOut"
+                    };
+                toastr.success("Danh sách tour đã được cập nhật vào trong hệ thống !!!.", opts);
+            });
+
+            $("#success_msg_2").click(function(ev)
+            {
+                ev.preventDefault();
+                var opts = {
+                    "closeButton": true,
+                    "debug": false,
+                    "positionClass": "toast-bottom-right",
+                    "onclick": null,
+                    "showDuration": "300",
+                    "hideDuration": "1000",
+                    "timeOut": "5000",
+                    "extendedTimeOut": "1000",
+                    "showEasing": "swing",
+                    "hideEasing": "linear",
+                    "showMethod": "fadeIn",
+                    "hideMethod": "fadeOut"
+                    };
+                toastr.success("Danh sách tour đã được gửi về email admin@gmail.com.", opts);
+            });
+        });
+    </script>
+    <!-- /. Main Jquery -->
+</head>
+<body>
+    
+    <!-- Sidebar navigation -->
+    <ul id="slide-out" class="side-nav fixed admin-side-nav dark-side-nav">
+        <!-- Logo -->
+        <div class="logo-wrapper">
+            <a>
+                <img src="../../../../img/avatar.png" class="img-responsive img-circle">
+                <div class="rgba-stylish-strong">
+                    <p class="user white-text">Tuân Bùi
+                       <br>
+                        <i class="fa fa-circle" style="color:#50AE41;font-size:9pt;"></i> <em style="font-size:9pt;">Online</em>
+                    </p>
+                </div>
+            </a>
+        </div>
+        <!--/. Logo -->
+
+        <!-- Side navigation links -->
+        <ul class="collapsible collapsible-accordion">
+            <li><input type="text" placeholder="Tìm kiếm ..."></li>
+            <li><a href="../../admin.html" class="waves-effect waves-light"><i class="fa fa-home"></i> Trang chủ</a></li>
+            <li><a href="../don-hang/don-hang.html" class="waves-effect waves-light"><i class="fa fa-money"></i> Đơn hàng</a></li>
+            <li><a href="../tour/tour.html" class="waves-effect waves-light"><i class="fa fa-tag"></i> Tour</a></li>
+            <li><a href="danh-muc-tour.html" class="waves-effect waves-light"><i class="fa fa-tags"></i> Danh mục tour</a></li>
+            <li><a href="../khach-hang/khach-hang.html" class="waves-effect waves-light"><i class="fa fa-users"></i> Khách hàng</a></li>
+            <li><a href="#" class="waves-effect waves-light"><i class="fa fa-volume-up"></i> Khuyến mại</a></li>
+            <hr>
+            <li><a href="../trang-noi-dung/trang-noi-dung.html" class="waves-effect waves-light"><i class="fa fa-file-text-o"></i> Trang nội dung</a></li>
+            <li><a href="../blog/blog.html" class="waves-effect waves-light"><i class="fa fa-comment"></i> Blog</a></li>
+            <li><a href="../menu/menu.html" class="waves-effect waves-light"><i class="fa fa-sitemap"></i> Menu</a></li>
+            <li><a href="theme.html" class="waves-effect waves-light  active"><i class="fa fa-tv"></i> Giao diện</a></li>
+            <li><a href="../file/file.html" class="waves-effect waves-light"><i class="fa fa-file-o"></i> File</a></li>
+            <hr>
+            <li><a class="collapsible-header waves-effect"><i class="fa fa-cogs"></i>Cấu hình <i class="fa fa-angle-down"></i></a>
+                <div class="collapsible-body">
+                    <ul>
+                        <li><a href="../cauhinh/cau-hinh-chung.html" class="waves-effect"><i class="fa fa-cog"></i>Cấu hình chung</a></li>
+                        <li><a href="../cauhinh/notification.html" class="waves-effect"><i class="fa fa-rss"></i>Thông báo</a></li>
+                        <li><a href="../cauhinh/thanh-toan.html" class="waves-effect"><i class="fa fa-shopping-cart"></i>Thanh toán</a></li>
+                        <li><a href="../cauhinh/tenmien.html" class="waves-effect"><i class="fa fa-globe"></i>Tên miền</a></li>
+                        <li><a href="../cauhinh/account/account.html" class="waves-effect"><i class="fa fa-user"></i>Tài khoản</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!--/. Side navigation links -->
+    </ul>
+    <!--/. Sidebar navigation -->
+
+    <!--Navbar-->
+    <nav class="double-navbar navbar navbar-fixed-top elegant-color z-depth-1" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header pull-left">
+                <!-- SideNav slide-out button -->
+                <a href="#" data-activates="slide-out" class="navbar-brand button-collapse hidden-md hidden-lg"><i class="material-icons">menu</i></a>
+                <!--/. SideNav slide-out button -->
+                <h5 class="hidden-xs hidden-sm"><i class="fa fa-tv"></i> Giao diện</h5>
+            </div>
+
+            <!-- Navbar Icons -->
+            <!-- <ul class="list-inline pull-right text-center">
+                <li><a href="#" class="btn btn-primary btn-rounded">Thêm mới</a>
+            </ul> -->
+            <!--/. Navbar Icons -->
+        </div>
+    </nav>
+    <!--/.Navbar-->
+    <main>
+        <div id="main-wapper">
+            <div class="container-fluid">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-md-6"><h5>Default Theme</h5></div>
+                            <div class="col-md-6">
+                                <a href="setting-theme.html" class="btn btn-primary pull-right">Thiết lập giao diện</a>
+                                <a href="../../../../home.html" class="btn btn-default pull-right" data-toggle="tooltip" data-placement="bottom" title="Xem thử giao diện này"><i class="fa fa-eye"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                      <div class="published-theme">
+                          <iframe  src="../../../../home.html"></iframe>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

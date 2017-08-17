@@ -1,0 +1,60 @@
+#main-wapper{
+	padding-left: 0px;
+	padding-top: 10px;
+}
+.navbar{
+	margin-bottom: 0px;
+	height: auto;
+}
+.theme iframe{
+	/*backface-visibility: hidden;*/
+    background-color: #fff;
+    border: medium none;
+    height: 994px;
+    /*margin-left: 30px;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute;*/
+    transform: scale(.59);
+    -webkit-transform: scale(.59);
+    -moz-transform: scale(.59);
+    transform-origin: 0 0 0;
+    -webkit-transform-origin: 0 0 0;
+    -moz-transform-origin: 0 0 0;
+    transform-style: preserve-3d;
+    transition: all .3s ease-in-out 0s;
+    width: 1470px;
+}
+.theme{
+    background-position: 0 1px;
+    background-repeat: no-repeat;
+    height: 609px;
+    /*margin: 0 auto;*/
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.screen{
+	bottom: 15px;
+	position: fixed;
+	left: 30px;
+}
+.screen-active{
+	background-color: #43A9E4;
+	color: #FFF
+}
+.pagination{
+	border: .5px solid#DDD;
+	background-color: #FFF;
+	color:#37A3D0;
+}
+.pagination li{
+	border: .5px solid#DDD; 
+	padding: 12px;
+}
+.pagination li:hover{
+	cursor: pointer;
+}
+.text-2x{
+    font-size: 14pt;
+}

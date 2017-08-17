@@ -1,0 +1,204 @@
+/*@media (max-width: 1320px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        font-size: 10pt;
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        /*margin: 7.5px -15px;*/
+    /*}
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .navbar-text {
+        float: none;
+        margin: 15px 0;
+    }
+    /* since 3.1.0 */
+    /*.navbar-collapse.collapse.in { 
+        display: block!important;
+    }
+    .collapsing {
+        overflow: hidden!important;
+    }*/
+/*}*/
+
+@media(max-width: 961px){
+    .navbar-right > li > a{
+        font-size: 8pt;
+        margin-left: -13px;
+    }
+    .top-nav-collapse .navbar-nav > li > a{
+        font-size: 8pt;
+    }
+}
+@media(max-width: 750px){
+
+    .navbar-right > li > a{
+        font-size: 12pt;
+        margin-left: 13px;
+        text-transform: uppercase;
+    }
+
+    #carousel1{
+        margin-top: -10px;
+    }
+}
+.btn-danger{
+    border-radius: 20px;
+}
+.navbar{
+    z-index: 999;
+}
+#carousel1{
+    margin-top: -80px;
+}
+.navbar-nav  li{
+    font-size: 10pt;
+}
+.navbar-nav  li:hover{
+    border-bottom: 2px solid#FFF;
+}
+.carousel-caption{
+    left: 5%;
+    right: 0;
+    text-align: left;
+    padding-bottom: 10em;
+}
+.carousel .carousel-indicators .active{
+    background-color: #E42626
+}
+.carousel-caption h1,
+.carousel-caption h2{
+    font-weight: 600;
+}
+.underline{
+    background: #F14B38;
+    height: 5px;
+    width: 100px;
+    margin: 18px auto;
+}
+#dichvu{
+    /*padding: 30px 0px;*/
+    padding-bottom: 50px;
+}
+#dichvu p{
+    font-size: 13pt;
+}
+#dichvu .col-md-4{
+    padding-top: 40px;
+}
+#dichvu .col-md-12{
+    padding-top: 40px;
+}
+
+#id-example1{
+    color: #FFF;
+    padding-top: 90px;
+    background-image: url("../../img/hightlight-background.jpg");
+}
+#id-example1 h4{
+    font-weight: 600;
+}
+#id-example1 p{
+    font-size: 12pt;
+}
+#id-example2{
+    color: #FFF;
+    background-image: url("../../img/dark-forest-2.jpg");
+}
+#id-example2 p{
+    font-size: 11pt;
+}
+#id-example2 .col-md-4 .row{
+    margin-bottom: 50px;
+}
+#gioithieu{
+    padding: 90px 0px;
+}
+#gioithieu p{
+    font-size: 10.5pt;
+}
+
+#tournoibat{
+    padding:90px 0px;
+}
+
+#tournoibat .card{
+    box-shadow: none;
+    border: 1px solid#DDD;
+    text-align: center;
+}
+#tournoibat .card .card-title{
+    color: #000;
+}
+#tournoibat .card .card-title h4{
+    font-weight: 600;
+    color: #F63D3D
+}
+#tintuc{
+    padding-bottom: 40px;
+}
+#tintuc .col-md-6{
+    padding-top: 40px;
+}
+#tintuc .col-md-8 p{
+    font-size: 10pt;
+    line-height: 20px;
+}
+#tintuc .col-md-6 .row{
+    margin-bottom: 28px;
+}
+
+#tour{
+    padding: 50px 0px;
+}
+
+#tour .col-md-3{
+    padding: 0px;
+}
+#doitac{
+    padding-bottom: 30px;
+}
+#lienhe{
+    padding: 40px 0px;
+}
+
+footer a{
+    font-size: 18pt;
+}
+
+.carousel-indicators{
+    text-align: left;
+    margin-bottom: 120px;
+}
+
+.card .card-action a{
+    color: #FFF;
+}
+.hm-zoom:hover .mask{
+    cursor: pointer;
+}
+
+#lienhe  textarea{
+    border-radius: 0;
+    border: 1px solid#9e9e9e;
+    padding: 15px;
+}
+.uppercase{
+    text-transform: uppercase;
+}
